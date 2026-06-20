@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture-Check</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/logoIcono.png">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo Posture-Check">
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        
+
+<nav class="menu"> 
+    <a href="#comoFunciona">Cómo funciona</a> 
+    <a href="#paraQuienEs">Para quién es</a> 
+    <a href="#NuestrosBeneficios">Beneficios</a> 
+    <a href="#Resenias">Testimonios</a> 
+    <a href="#preguntasFrecuentes">Preguntas frecuentes</a> 
+</nav>
+
+
+
+        
+<div class="acciones">
+
+
+    <button class="btn-login" id="btnLogin" type="button">
+        Iniciar Sesión
+    </button>
+
+    <button class="btn-unete" id="btnUnete" type="button">
+        Únete Ahora
+    </button>
+
+</div>
+
+    </header>
+
+    <main id="main-hero" class="hero">
+        <div class="hero-texto">
+            <h1>
+                Corrige tu postura sin
+                <span>interrumpir tu rutina</span>
+            </h1>
+            <p class="parrafo">
+                Posture-Check monitorea la postura en tiempo real, envía alertas discretas y 
+ofrece recomendaciones personalizadas para estudiantes, trabajadores 
+remotos y gamers.
+            </p>
+            <div class="hero-botones">
+                <button class="btn-primario" id="btnProbarAhora" type="button">
+    Probar ahora
+</button>
+                <button class="btn-secundario" id="btnVerComoFunciona" type="button">
+    Ver cómo funciona
+</button>
+                <script>
+                    document.getElementById("btnVerComoFunciona").addEventListener("click", function () {
+                        document.getElementById("comoFunciona").scrollIntoView({ behavior: "smooth" });
+                    });
+                </script>
+            </div>
+            <div class="datos">
+                <p>+1,000 usuarios potenciales</p>
+                <p>Monitoreo en tiempo real</p>
+                <p>100% enfoque preventivo</p>
+            </div>
+        </div>
+
+        <div class="hero-imagen">
+            <img src="imagenes/img1.png" alt="Imagen de Posture-Check">
+        </div>
+
+    </main>
+
+
+    <section class="container" id="comoFunciona">
+        <h1 class="title">¿Cómo funciona?</h1>
+        <p class="subtitle">Mejoramos tu salud postural en pocos pasos usando tecnología inteligente</p>
+
+        <div class="grid">
+            <!-- Columna Estudiantes -->
+            <div class="segment-column column-estudiantes">
+                <h2 class="column-title">Para estudiantes universitarios</h2>
+                <p class="column-subtitle">
+                    Mantén una postura saludable mientras estudias y realizas trabajos frente a la pantalla.
+                </p>
+
+                <div class="blue card">
+                    <i class="fa-solid fa-toggle-on"></i>
+                    <h3>Activa el monitoreo</h3>
+                    <p>Inicia la detección postural antes de comenzar tus clases o sesiones de estudio.</p>
+                </div>
+
+                <div class="blue card">
+                    <i class="fa-solid fa-bell"></i>
+                    <h3>Recibe alertas discretas</h3>
+                    <p>Corrige tu postura a tiempo sin interrumpir tus clases, lecturas o tareas.</p>
+                </div>
+
+                <div class="blue card">
+                    <i class="fa-solid fa-user-check"></i>
+                    <h3>Mejora tus hábitos</h3>
+                    <p>Consulta recomendaciones para estudiar cómodamente y reducir la tensión corporal.</p>
+                </div>
+            </div>
+
+            <!-- Columna Trabajadores remotos -->
+            <div class="segment-column column-trabajadores">
+                <h2 class="column-title">Para trabajadores remotos</h2>
+                <p class="column-subtitle">
+                    Protege tu cuello y espalda durante reuniones y largas jornadas de trabajo desde casa.
+                </p>
+
+                <div class="purple card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h3>Inicia tu jornada</h3>
+                    <p>Activa el análisis postural mientras trabajas, programas o participas en reuniones.</p>
+                </div>
+
+                <div class="purple card">
+                    <i class="fa-solid fa-sliders"></i>
+                    <h3>Personaliza las alertas</h3>
+                    <p>Configura la frecuencia y el tipo de aviso según tu rutina y tus preferencias.</p>
+                </div>
+
+                <div class="purple card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Revisa tu progreso</h3>
+                    <p>Visualiza el tiempo monitoreado y los avances obtenidos durante tu jornada laboral.</p>
+                </div>
+            </div>
+
+            <!-- Columna Gamers -->
+            <div class="segment-column column-gamers">
+                <h2 class="column-title">Para gamers</h2>
+                <p class="column-subtitle">
+                    Juega por más tiempo cuidando tu cuello, espalda y rendimiento durante tus partidas.
+                </p>
+
+                <div class="gree card card-green">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Detecta malas posturas</h3>
+                    <p>Supervisa tu postura durante sesiones largas de juego.</p>
+                </div>
+
+                <div class="gree card card-green">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <h3>Pospone alertas</h3>
+                    <p>Silencia las notificaciones temporalmente durante momentos importantes de la partida.</p>
+                </div>
+
+                <div class="gree card card-green">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <h3>Haz pausas activas</h3>
+                    <p>Recibe ejercicios breves para reducir la tensión muscular y la fatiga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="paraQuienEs" class="por_que">
+        <h2>¿Por qué elegir <span>Posture-Check?</span></h2>
+        <p>Una solución moderna, preventiva y accesible para mejorar tu salud postural</p>
+
+        <div class="list-container">
+            <div class="por_que-container">
+                <img class="iconos" src="imagenes/logo-monitoreo.png" alt="logo-monitoreo">
+                <h3>Monitoreo inteligente</h3>
+                <p>Detecta desviaciones posturales en tiempo real usando IA<br></p>
+            </div>
+            <div class="por_que-container">
+                <img class="iconos" src="imagenes/logo-prevencion.png" alt="logo-prevencion">
+                <h3>Prevención continua</h3>
+                <p>Ayuda a evitar molestias musculares antes de que se conviertan en un problema<br></p>
+            </div>
+            <div class="por_que-container">
+                <img class="iconos" src="imagenes/logo-privacidad.png" alt="logo-privacidad">
+                <h3>Privacidad garantizada</h3>
+                <p>El procesamiento se realiza localmente, sin almacenar imágenes sensibles<br></p>
+            </div>
+            <div class="por_que-container">
+                <img class="iconos" src="imagenes/logo-usar.png" alt="logo-usar">
+                <h3>Fácil de usar</h3>
+                <p>Una interfaz intuitiva pensada para estudiantes, trabajadores remotos y gamers<br></p>
+            </div>
+        </div>
+
+        <div class="por_que-images">
+
+            <div class="img-container">
+                <img src="imagenes/estudiante.png"
+                    alt="Estudiante universitario usando Posture-Check">
+
+                <div class="image-content">
+                    <h3>Para estudiantes</h3>
+                    <p>
+                        Mejora tu postura mientras estudias, realizas trabajos
+                        o participas en clases virtuales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="imagenes/trabajador.png"
+                    alt="Trabajador remoto usando Posture-Check">
+
+                <div class="image-content">
+                    <h3>Para trabajadores</h3>
+                    <p>
+                        Cuida tu cuello y espalda durante reuniones,
+                        jornadas laborales y trabajo desde casa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="imagenes/gamer.png"
+                    alt="Gamer utilizando Posture-Check">
+
+                <div class="image-content">
+                    <h3>Para gamers</h3>
+                    <p>
+                        Mantén tu rendimiento sin descuidar tu salud física
+                        durante tus partidas.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="NuestrosBeneficios" class="beneficiarios">
+        <div class="beneficios">
+            <h2>Beneficios</h2>
+            <p>Beneficios diseñados para mejorar tu experiencia, tu salud y tu productividad</p>
+        </div>
+        <div class="beneficios-usuarios">
+            <div class="card">
+                <i class="Be fa-solid fa-video"></i>
+                <h3>Monitoreo en tiempo real</h3>
+                <p>Analiza tu postura mientras realizas tus actividades diarias.</p>
+            </div>
+            <div class="card">
+                <i class="Be fa-solid fa-bell"></i>
+                <h3>Alertas personalizadas</h3>
+                <p>Configura el tiempo, frecuencia y tipo de notificación según tus preferencias.</p>
+            </div>
+
+            <div class="card">
+                <i class="Be fa-solid fa-chair"></i>
+                <h3>Recomendaciones ergonómicas</h3>
+                <p>Recibe consejos útiles para corregir cuello, espalda y posición de pantalla.</p>
+            </div>
+
+            <div class="card">
+                <i class="Be fa-solid fa-person-walking"></i>
+                <h3>Pausas activas guiadas</h3>
+                <p>Realiza ejercicios cortos para reducir la tensión muscular.</p>
+            </div>
+
+            <div class="card">
+                <i class="Be fa-solid fa-chart-line"></i>
+                <h3>Resumen de progreso</h3>
+                <p>Visualiza tu desempeño postural, alertas recibidas y tiempo monitoreado.</p>
+            </div>
+
+            <div class="card">
+                <i class="Be fa-solid fa-shield-halved"></i>
+                <h3>Privacidad y confianza</h3>
+                <p>Protegemos tu información con un enfoque no invasivo y seguro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Resenias" class="testimonios">
+        <h2>Lo que dicen nuestros usuarios</h2>
+        <p class="sub">Experiencias reales de personas que mejoraron su bienestar con Posture-Check.</p>
+        <div class="test-container">
+            <div class="test-card">
+                <div class="estrellas">★★★★★</div>
+                <p class="texto">
+                    “Posture-Check me ayudó a darme cuenta de cuánto tiempo pasaba encorvada mientras estudiaba. Ahora tengo mejores hábitos y menos dolor de espalda.”
+                </p>
+                <div class="user">
+                    <img src="imagenes/perfil2.png" alt="María">
+                    <div>
+                        <h4>María López</h4>
+                        <span>Estudiante universitaria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="estrellas">★★★★★</div>
+                <p class="texto">
+                    “Trabajo muchas horas frente a la computadora y las alertas me ayudan a corregirme a tiempo. La app es simple y muy útil.”
+                </p>
+                <div class="user">
+                    <img src="imagenes/perfil1.png" alt="Carlos">
+                    <div>
+                        <h4>Carlos Rivera</h4>
+                        <span>Programador remoto</span>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="estrellas">★★★★★</div>
+                <p class="texto">
+                    “Antes terminaba mis sesiones de juego con tensión en el cuello. Ahora hago pausas activas y siento una gran diferencia.”
+                </p>
+                <div class="user">
+                    <img src="imagenes/perfil3.png" alt="Claudia">
+                    <div>
+                        <h4>Claudia Vélez</h4>
+                        <span>Gamer frecuente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dudas" id="preguntasFrecuentes">
+        <h2>¿Tienes dudas?</h2>
+        <p class="sub">Aquí encontrarás respuestas a las preguntas más comunes</p>
+        <div class="dudas-container">
+
+            <details>
+                <summary>¿Cómo funciona el monitoreo postural?</summary>
+                <p>Posture-Check utiliza la cámara de tu dispositivo para analizar tu postura en tiempo real. Cuando detecta una posición inadecuada durante varios minutos, envía una alerta discreta para ayudarte a corregirla.</p>
+            </details>
+
+            <details>
+                <summary>¿La aplicación guarda mis imágenes o videos?</summary>
+                <p>No. Posture-Check prioriza tu privacidad. Las imágenes se procesan únicamente para analizar tu postura y no se almacenan ni se comparten con terceros.</p>
+            </details>
+
+            <details>
+                <summary>¿Qué tipo de alertas recibiré?</summary>
+                <p>Recibirás alertas visuales o sonoras cuando mantengas una mala postura durante un tiempo prolongado. También podrás configurar la frecuencia y el tipo de notificación según tus preferencias.</p>
+            </details>
+
+            <details>
+                <summary>¿Posture-Check también recomienda ejercicios?</summary>
+                <p>Sí. La aplicación ofrece pausas activas, estiramientos y recomendaciones ergonómicas para reducir la tensión en el cuello, los hombros y la espalda.</p>
+            </details>
+
+            <details>
+                <summary>¿A quién está dirigida la aplicación?</summary>
+                <p>Posture-Check está dirigida a estudiantes universitarios, trabajadores remotos y gamers que pasan varias horas sentados frente a una computadora o dispositivo.</p>
+            </details>
+
+        </div>
+    </section>
+
+    <section class="seccion-contacto" id="contacto">
+        <h2>¿Necesitas ayuda?</h2>
+        <p>Estamos aquí para responder tus preguntas</p>
+
+        <div class="contacto-box">
+            <form class="formulario" id="contactoForm">
+
+                <div class="espacios">
+                    <div class="nombreCompleto">
+                        <label>Nombre completo</label>
+                    </div>
+                    <div class="box box-nombre">
+                        <input type="text" id="nombre" placeholder="Tu Nombre">
+                    </div>
+
+                    <div class="correo">
+                        <label>Correo electrónico</label>
+                    </div>
+                    <div class="box box-correo">
+                        <input type="email" id="email" placeholder="tu@email">
+                    </div>
+
+                    <div class="mensaje">
+                        <label>Mensaje</label>
+                    </div>
+                    <div class="box box-mensaje">
+                        <textarea id="mensaje" rows="8" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+
+                    <div class="boton-iniciarSesion">
+                        <button class="boton-iniciar-boton" type="submit">Enviar Mensaje</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- MODAL BONITA -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h3>Mensaje enviado</h3>
+                <p>Gracias por contactarnos. Te responderemos pronto.</p>
+                <button id="cerrarModal">Cerrar</button>
+            </div>
+        </div>
+
+        <script>
+            const form = document.getElementById('contactoForm');
+            const modal = document.getElementById('modal');
+            const cerrarModal = document.getElementById('cerrarModal');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Mostrar modal
+                modal.style.display = "flex";
+
+                // Limpiar formulario
+                form.reset();
+            });
+
+            cerrarModal.addEventListener('click', () => {
+                modal.style.display = "none";
+            });
+
+            // Cerrar si hace click fuera de la ventana
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+
+    </section>
+
+
+    <section class="listo-para">
+        <h2>¿Listo para mejorar tu postura?</h2>
+        <p>Únete a Posture-Check y empieza a construir hábitos más saludables mientras estudias, trabajas o juegas.<br></p>
+        <div class="listo-para-botones">
+            <button class="listo-para-boton-registro" id="registrar">Registrarme ahora</button>
+            <script>
+                document.getElementById("registrar").addEventListener("click", function () {
+                    window.location.href = "/registro/registro.html";
+                });
+            </script>
+            <button class="listo-para-boton-ver" id="verBeneficios">
+    Ver beneficios
+</button>
+
+<script>
+    document.getElementById("verBeneficios").addEventListener("click", function () {
+        document.getElementById("NuestrosBeneficios").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+</script>
+        </div>
+    </section>
+
+    <footer class="footer">
+<div class="footer-container">
+
+    <div class="footer-col marca">
+        <div class="footer-logo">
+            <img src="imagenes/logo.png" alt="Logo Posture-Check">
+
+            <div>
+                <h3 class="logo">Posture-Check</h3>
+                <p class="slogan">
+                    Mejorando tu postura, mejorando tu bienestar.
+                </p>
+            </div>
+        </div>
+
+        <p class="descripcion">
+            Una solución inteligente que te ayuda a corregir tu postura
+            mientras estudias, trabajas o juegas.
+        </p>
+    </div>
+
+
+    <div class="footer-col">
+        <h4>Producto</h4>
+
+        <ul>
+            <li><a href="#comoFunciona">Cómo funciona</a></li>
+            <li><a href="#NuestrosBeneficios">Beneficios</a></li>
+            <li><a href="#paraQuienEs">Recomendaciones</a></li>
+            <li><a href="#preguntasFrecuentes">Seguridad</a></li>
+        </ul>
+    </div>
+
+
+    <div class="footer-col">
+        <h4>Usuarios</h4>
+
+        <ul>
+            <li><a href="#comoFunciona">Estudiantes</a></li>
+            <li><a href="#comoFunciona">Trabajadores remotos</a></li>
+            <li><a href="#comoFunciona">Gamers</a></li>
+            <li>
+                <a href="#preguntasFrecuentes">
+                    Preguntas frecuentes
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="footer-col">
+        <h4>Empresa</h4>
+
+        <ul>
+            <li><a href="#paraQuienEs">Sobre nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contacto">Soporte</a></li>
+        </ul>
+    </div>
+
+
+    <div class="footer-col redes-footer">
+        <h4>Redes sociales</h4>
+
+        <div class="redes-iconos">
+
+            <a href="#" aria-label="Facebook" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="WhatsApp" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="landing.js"></script>
+
+
+
+
+<script>
+    const botonModoOscuro = document.getElementById("btnModoOscuro");
+    const iconoModo = document.getElementById("iconoModo");
+
+    function obtenerTemaGuardado() {
+        const temaNuevo = localStorage.getItem("tema");
+        const temaAnterior = localStorage.getItem("modoOscuro");
+
+        if (temaNuevo === "oscuro") {
+            return "oscuro";
+        }
+
+        if (temaNuevo === "claro") {
+            return "claro";
+        }
+
+        if (temaAnterior === "activado") {
+            return "oscuro";
+        }
+
+        return "claro";
+    }
+
+    function aplicarTema(tema) {
+        const modoOscuroActivo = tema === "oscuro";
+
+        document.body.classList.toggle(
+            "modo-oscuro",
+            modoOscuroActivo
+        );
+
+        if (iconoModo) {
+            iconoModo.classList.toggle("fa-moon", !modoOscuroActivo);
+            iconoModo.classList.toggle("fa-sun", modoOscuroActivo);
+        }
+
+        if (botonModoOscuro) {
+            botonModoOscuro.setAttribute(
+                "aria-label",
+                modoOscuroActivo
+                    ? "Activar modo claro"
+                    : "Activar modo oscuro"
+            );
+
+            botonModoOscuro.title = modoOscuroActivo
+                ? "Modo claro"
+                : "Modo oscuro";
+        }
+    }
+
+    aplicarTema(obtenerTemaGuardado());
+
+    if (botonModoOscuro) {
+        botonModoOscuro.addEventListener("click", () => {
+            const estaOscuro =
+                document.body.classList.contains("modo-oscuro");
+
+            const nuevoTema = estaOscuro ? "claro" : "oscuro";
+
+            localStorage.setItem("tema", nuevoTema);
+            localStorage.setItem(
+                "modoOscuro",
+                nuevoTema === "oscuro"
+                    ? "activado"
+                    : "desactivado"
+            );
+
+            aplicarTema(nuevoTema);
+        });
+    }
+
+    window.addEventListener("storage", () => {
+        aplicarTema(obtenerTemaGuardado());
+    });
+</script>
+
+<script src="landing.js"></script>
+
+</body>
+</html>
