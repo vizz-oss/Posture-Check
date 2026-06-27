@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Gamer | Posture-Check</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Juega mejor, cuida tu postura</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="/gamers/dashboard/dashboard.html">Dashboard</a>
+            <a href="/gamers/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="/gamers/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Gamer</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="/gamers/perfil/perfil.html">Mi perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="/landing/landing.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero-dashboard hero-gamer">
+
+            <div class="hero-contenido">
+
+                <span class="etiqueta">Panel gamer</span>
+
+                <h1>Juega mejor mientras cuidas tu postura</h1>
+
+                <p>
+                    Revisa tus partidas, controla tus alertas posturales y mejora tus hábitos
+                    durante cada sesión de juego.
+                </p>
+
+                <button id="btnIniciarMonitoreo" class="btn-principal" type="button">
+                    <i class="fa-solid fa-play"></i>
+                    Iniciar monitoreo
+                </button>
+
+            </div>
+
+            <div class="hero-icono">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+
+        </section>
+
+
+        <section class="resumen">
+
+            <div class="tarjeta-resumen">
+                <div class="icono verde">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div>
+                    <span>Tiempo de juego hoy</span>
+                    <strong>3 h 45 min</strong>
+                    <small>Meta diaria: 4 horas</small>
+                </div>
+            </div>
+
+
+            <div class="tarjeta-resumen">
+                <div class="icono verde">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+                    <span>Postura correcta</span>
+                    <strong>79%</strong>
+                    <small>5% mejor que ayer</small>
+                </div>
+            </div>
+
+
+            <div class="tarjeta-resumen">
+                <div class="icono verde">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+
+                <div>
+                    <span>Alertas recibidas</span>
+                    <strong>8</strong>
+                    <small>Principalmente por espalda</small>
+                </div>
+            </div>
+
+
+            <div class="tarjeta-resumen">
+                <div class="icono verde">
+                    <i class="fa-solid fa-person-walking"></i>
+                </div>
+
+                <div>
+                    <span>Pausas activas</span>
+                    <strong>3</strong>
+                    <small>Meta diaria completada</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="contenido-dashboard">
+
+            <div class="columna-principal">
+
+                <div class="tarjeta">
+
+                    <div class="titulo-seccion">
+                        <div>
+                            <h2>Partidas recientes</h2>
+                            <p>Resumen de tus últimas partidas con monitoreo postural.</p>
+                        </div>
+
+                        <button id="btnVerTodas" class="btn-secundario" type="button">
+                            Ver todas
+                        </button>
+                    </div>
+
+
+                    <div class="lista-sesiones">
+
+                        <div class="sesion">
+
+                            <div class="icono-juego">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div class="info-sesion">
+                                <h3>Partida competitiva</h3>
+                                <p>2 horas · Postura correcta: 82%</p>
+                            </div>
+
+                            <span class="estado bueno">Buen resultado</span>
+
+                        </div>
+
+
+                        <div class="sesion">
+
+                            <div class="icono-juego">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+
+                            <div class="info-sesion">
+                                <h3>Sesión casual</h3>
+                                <p>1 hora 15 minutos · Postura correcta: 74%</p>
+                            </div>
+
+                            <span class="estado alerta">Debes mejorar</span>
+
+                        </div>
+
+
+                        <div class="sesion">
+
+                            <div class="icono-juego">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+
+                            <div class="info-sesion">
+                                <h3>Torneo online</h3>
+                                <p>2 horas 30 minutos · Postura correcta: 80%</p>
+                            </div>
+
+                            <span class="estado bueno">Buen resultado</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="titulo-seccion">
+                        <div>
+                            <h2>Progreso semanal</h2>
+                            <p>Tu evolución durante los últimos siete días.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="grupo-progreso">
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Postura correcta</span>
+                                <strong>79% / 85%</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 79%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Pausas activas</span>
+                                <strong>16 / 20</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Tiempo monitoreado</span>
+                                <strong>18 h / 24 h</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <aside class="columna-lateral">
+
+                <div class="tarjeta">
+
+                    <h2>Consejo gamer del día</h2>
+
+                    <div class="recomendacion-icono">
+                        <i class="fa-solid fa-chair"></i>
+                    </div>
+
+                    <h3>Optimiza tu setup</h3>
+
+                    <p>
+                        Ajusta la silla, apoya la espalda y mantén los pies firmes
+                        para jugar con mayor comodidad.
+                    </p>
+
+                    <button id="btnVerRecomendacion" class="btn-principal" type="button">
+                        Ver recomendación
+                    </button>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h2>Configuración gamer</h2>
+
+                    <div class="campo">
+                        <label for="duracion">Duración estimada</label>
+
+                        <select id="duracion">
+                            <option>30 minutos</option>
+                            <option>1 hora</option>
+                            <option selected>2 horas</option>
+                            <option>4 horas</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="frecuencia">Alertas</label>
+
+                        <select id="frecuencia">
+                            <option>Cada 5 minutos</option>
+                            <option selected>Cada 10 minutos</option>
+                            <option>Cada 15 minutos</option>
+                            <option>Cada 30 minutos</option>
+                        </select>
+                    </div>
+
+                    <button id="btnGuardarConfiguracion" class="btn-principal" type="button">
+                        Guardar configuración
+                    </button>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h2>Accesos rápidos</h2>
+
+                    <div class="accesos">
+
+                        <a href="/gamers/monitoreo/monitoreo.html">
+                            <i class="fa-solid fa-video"></i>
+                            Iniciar monitoreo
+                        </a>
+
+                        <a href="/gamers/perfil/perfil.html">
+                            <i class="fa-solid fa-user"></i>
+                            Ver perfil
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            Configuración
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3>Posture-Check</h3>
+                        <p>Juega mejor, cuida tu postura</p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Ayudamos a gamers a mantener hábitos posturales saludables
+                    durante sus sesiones de juego.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Gamers</h4>
+
+                <ul>
+                    <li><a href="/gamers/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="/gamers/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="/gamers/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="/landing/landing.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="/landing/landing.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="/landing/landing.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+
+
+
+<script>
+    function aplicarTemaGuardado() {
+        const temaNuevo = localStorage.getItem("tema");
+        const temaAnterior = localStorage.getItem("modoOscuro");
+
+        const usarOscuro =
+            temaNuevo === "oscuro" ||
+            (temaNuevo === null && temaAnterior === "activado");
+
+        document.body.classList.toggle("modo-oscuro", usarOscuro);
+    }
+
+    aplicarTemaGuardado();
+
+    window.addEventListener("storage", aplicarTemaGuardado);
+</script>
+
+</body>
+</html>

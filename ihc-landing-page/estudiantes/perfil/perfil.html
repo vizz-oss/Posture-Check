@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil del estudiante | Posture-Check</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/estudiantes/perfil/perfil.css">
+    <script defer src="/estudiantes/perfil/script.js"></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="/estudiantes/perfil/imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="/estudiantes/dashboard/dashboard.html">Dashboard</a>
+            <a href="/estudiantes/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="/estudiantes/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-regular fa-user"></i>
+                <span>Estudiante</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <a href="/estudiantes/perfil/perfil.html">
+                            Mi perfil
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Configuración
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/landing/landing.html">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="informacion-artista">
+
+            <div class="layout-artista">
+
+                <div class="foto-artista">
+                    <img
+                        src="/estudiantes/perfil/imagenes/estudiante.png"
+                        alt="Foto del estudiante">
+                </div>
+
+                <div class="contenedor-info">
+
+                    <h1>María García</h1>
+
+                    <div class="ubi-cal">
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot icono"></i>
+                            <p>Lima, Perú</p>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-regular fa-calendar icono"></i>
+                            <p>Miembro desde 2026</p>
+                        </div>
+
+                    </div>
+
+                    <div class="categorias">
+                        <div class="caja-categoria">Estudiante universitaria</div>
+                        <div class="caja-categoria">Clases virtuales</div>
+                        <div class="caja-categoria">Sesiones de estudio</div>
+                        <div class="caja-categoria">Bienestar postural</div>
+                    </div>
+
+                    <div class="descripcion">
+                        <p>
+                            Estudiante universitaria que utiliza Posture-Check para
+                            cuidar su postura durante clases virtuales, tareas y largas
+                            sesiones frente a la computadora. Su objetivo es reducir
+                            molestias en el cuello y la espalda y mantener hábitos
+                            saludables mientras estudia.
+                        </p>
+                    </div>
+
+                    <div class="stats">
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-user-check icono-star"></i>
+                            <p><span>78%</span> de postura correcta</p>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-regular fa-clock icono"></i>
+                            <p><span>18.5 h</span> monitoreadas</p>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-fire icono"></i>
+                            <p><span>6 días</span> de racha activa</p>
+                        </div>
+
+                    </div>
+
+                    <div class="contenedor-opciones-info">
+
+                        <div id="editar-perfil" class="info-item">
+                            <i class="fa-solid fa-user-pen icono-opciones"></i>
+                            <p>Editar perfil</p>
+                        </div>
+
+                        <div id="ver-progreso" class="info-item">
+                            <i class="fa-solid fa-chart-line icono"></i>
+                            <p>Ver progreso</p>
+                        </div>
+
+                        <div id="configurar-alertas" class="info-item">
+                            <i class="fa-solid fa-bell icono"></i>
+                            <p>Configurar alertas</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="articulos">
+
+            <div class="layout-obras">
+
+                <div class="contenedor-botones">
+                    <button id="btn-galería" class="boton activo">
+                        Actividad
+                    </button>
+
+                    <button id="btn-reseñas" class="boton">
+                        Progreso
+                    </button>
+
+                    <button id="btn-sobremi" class="boton">
+                        Sobre mí
+                    </button>
+                </div>
+
+
+                <div id="seccion-galeria" class="seccion">
+
+                    <div class="card">
+
+                        <div class="card-img">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h2>Sesión de estudio</h2>
+                            <p>Duración: 2 horas</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <h2>82%</h2>
+
+                            <div class="card-button-footer">
+                                <div class="info-item">
+                                    <i class="fa-solid fa-user-check icono"></i>
+                                </div>
+
+                                <div class="btn-detalle">
+                                    <i class="fa-solid fa-eye icono-card-footer"></i>
+                                    <p>Ver detalle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-img">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h2>Clase virtual</h2>
+                            <p>Duración: 1 hora 30 minutos</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <h2>75%</h2>
+
+                            <div class="card-button-footer">
+                                <div class="info-item">
+                                    <i class="fa-solid fa-user-check icono"></i>
+                                </div>
+
+                                <div class="btn-detalle">
+                                    <i class="fa-solid fa-eye icono-card-footer"></i>
+                                    <p>Ver detalle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-img">
+                            <i class="fa-solid fa-file-pen"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h2>Trabajo académico</h2>
+                            <p>Duración: 3 horas</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <h2>80%</h2>
+
+                            <div class="card-button-footer">
+                                <div class="info-item">
+                                    <i class="fa-solid fa-user-check icono"></i>
+                                </div>
+
+                                <div class="btn-detalle">
+                                    <i class="fa-solid fa-eye icono-card-footer"></i>
+                                    <p>Ver detalle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-img">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h2>Reunión grupal</h2>
+                            <p>Duración: 1 hora</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <h2>85%</h2>
+
+                            <div class="card-button-footer">
+                                <div class="info-item">
+                                    <i class="fa-solid fa-user-check icono"></i>
+                                </div>
+
+                                <div class="btn-detalle">
+                                    <i class="fa-solid fa-eye icono-card-footer"></i>
+                                    <p>Ver detalle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="seccion-reseñas" class="seccion" style="display: none;">
+
+                    <div class="barras-reseña">
+
+                        <div class="barra-comentario">
+
+                            <div class="persona-info">
+
+                                <div class="reseña-imagen">
+                                    <i class="fa-solid fa-neck"></i>
+                                </div>
+
+                                <div class="datos">
+                                    <h2>Postura de cuello</h2>
+                                    <p>Última revisión: hoy</p>
+                                </div>
+
+                                <div class="estrellas">
+                                    <span>80%</span>
+                                </div>
+
+                            </div>
+
+                            <div class="comentario">
+                                <p>
+                                    Has mejorado la posición del cuello durante tus
+                                    sesiones de estudio. Continúa manteniendo la pantalla
+                                    a la altura de los ojos.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-comentario">
+
+                            <div class="persona-info">
+
+                                <div class="reseña-imagen">
+                                    <i class="fa-solid fa-person"></i>
+                                </div>
+
+                                <div class="datos">
+                                    <h2>Postura de espalda</h2>
+                                    <p>Última revisión: ayer</p>
+                                </div>
+
+                                <div class="estrellas">
+                                    <span>74%</span>
+                                </div>
+
+                            </div>
+
+                            <div class="comentario">
+                                <p>
+                                    La postura de tu espalda ha mejorado, pero todavía
+                                    debes evitar inclinarte hacia adelante durante tareas largas.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="barra-comentario">
+
+                            <div class="persona-info">
+
+                                <div class="reseña-imagen">
+                                    <i class="fa-solid fa-person-walking"></i>
+                                </div>
+
+                                <div class="datos">
+                                    <h2>Pausas activas</h2>
+                                    <p>Última revisión: esta semana</p>
+                                </div>
+
+                                <div class="estrellas">
+                                    <span>12/15</span>
+                                </div>
+
+                            </div>
+
+                            <div class="comentario">
+                                <p>
+                                    Completaste la mayoría de tus pausas activas.
+                                    Te faltan tres para alcanzar tu objetivo semanal.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="seccion-sobremi" class="seccion" style="display: none;">
+
+                    <div class="contenedor-info-detallada">
+
+                        <div class="acerca">
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-graduation-cap icono-medal"></i>
+                                <h2>Acerca de mi rutina</h2>
+                            </div>
+
+                            <p>
+                                Paso varias horas al día estudiando frente a una computadora,
+                                participando en clases virtuales y desarrollando trabajos
+                                académicos. Utilizo Posture-Check para mantener una posición
+                                adecuada, recibir alertas y hacer pausas activas.
+                            </p>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="especialidad">
+
+                            <h2>Objetivos personales</h2>
+
+                            <div class="categorias">
+                                <div class="caja-categoria">Reducir dolor de espalda</div>
+                                <div class="caja-categoria">Mejorar postura</div>
+                                <div class="caja-categoria">Realizar pausas activas</div>
+                                <div class="caja-categoria">Estudiar cómodamente</div>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="info-detallada-footer">
+
+                            <div class="tecnicas-principales">
+
+                                <h2>Rutina habitual</h2>
+
+                                <ul>
+                                    <li>Clases virtuales</li>
+                                    <li>Lecturas académicas</li>
+                                    <li>Trabajos frente a la computadora</li>
+                                    <li>Sesiones de estudio prolongadas</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="exposiciones">
+
+                                <h2>Preferencias de monitoreo</h2>
+
+                                <ul>
+                                    <li>Alertas visuales</li>
+                                    <li>Avisos cada 30 minutos</li>
+                                    <li>Pausas activas de 5 minutos</li>
+                                    <li>Resumen semanal de progreso</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="/estudiantes/perfil/imagenes/logo.png"
+                        alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3 class="logo">Posture-Check</h3>
+                        <p class="slogan">
+                            Mejorando tu postura, mejorando tu bienestar
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="descripcion">
+                    Una solución inteligente que ayuda a estudiantes,
+                    trabajadores remotos y gamers a mejorar sus hábitos posturales.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Estudiantes</h4>
+
+                <ul>
+                    <li><a href="/estudiantes/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="/estudiantes/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="/estudiantes/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="/landing/landing.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="/landing/landing.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="/landing/landing.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Soporte</h4>
+
+                <ul>
+                    <li><a href="/landing/landing.html#contacto">Contacto</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="/landing/landing.html">Cerrar sesión</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+
+
+<script>
+    function aplicarTemaGuardado() {
+        const temaNuevo = localStorage.getItem("tema");
+        const temaAnterior = localStorage.getItem("modoOscuro");
+
+        const usarOscuro =
+            temaNuevo === "oscuro" ||
+            (temaNuevo === null && temaAnterior === "activado");
+
+        document.body.classList.toggle("modo-oscuro", usarOscuro);
+    }
+
+    aplicarTemaGuardado();
+
+    window.addEventListener("storage", aplicarTemaGuardado);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil del trabajador | Posture-Check</title>
+
+    <link rel="stylesheet" href="perfil.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="/trabajadores/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="/trabajadores/dashboard/dashboard.html">Dashboard</a>
+            <a href="/trabajadores/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="/trabajadores/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Trabajador remoto</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="/trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="/landing/landing.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="cabecera-perfil">
+
+            <div class="perfil-principal">
+
+                <div class="avatar">
+    <img src="imagenes/trabajador.png" alt="Foto de perfil del trabajador remoto">
+</div>
+
+                <div class="datos-principales">
+                    <span class="etiqueta">Perfil de trabajador remoto</span>
+
+                    <h1 id="nombreMostrado">Diego De la Cruz</h1>
+
+                    <p id="cargoMostrado">
+                        Trabajador remoto · Desarrollo y gestión de proyectos
+                    </p>
+
+                    <div class="ubicacion">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="ubicacionMostrada">Lima, Perú</span>
+                    </div>
+                </div>
+
+                <button id="btnEditarPerfil" class="btn-editar" type="button">
+                    <i class="fa-solid fa-pen"></i>
+                    Editar perfil
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="contenido-perfil">
+
+            <div class="columna-principal">
+
+                <div class="tarjeta">
+
+                    <div class="titulo-tarjeta">
+                        <div>
+                            <h2>Resumen de bienestar</h2>
+                            <p>Resultados acumulados de tus sesiones laborales.</p>
+                        </div>
+                    </div>
+
+                    <div class="estadisticas">
+
+                        <div class="estadistica">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Tiempo monitoreado</span>
+                            <strong>42 h 30 min</strong>
+                        </div>
+
+                        <div class="estadistica">
+                            <i class="fa-solid fa-user-check"></i>
+                            <span>Postura correcta</span>
+                            <strong>82%</strong>
+                        </div>
+
+                        <div class="estadistica">
+                            <i class="fa-regular fa-bell"></i>
+                            <span>Alertas recibidas</span>
+                            <strong>37</strong>
+                        </div>
+
+                        <div class="estadistica">
+                            <i class="fa-solid fa-person-walking"></i>
+                            <span>Pausas activas</span>
+                            <strong>24</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="titulo-tarjeta">
+                        <div>
+                            <h2>Progreso semanal</h2>
+                            <p>Compara tus resultados con las metas configuradas.</p>
+                        </div>
+                    </div>
+
+                    <div class="grupo-progreso">
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Postura correcta</span>
+                                <strong>82% / 85%</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 82%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Pausas activas</span>
+                                <strong>24 / 30</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progreso-item">
+                            <div class="progreso-info">
+                                <span>Tiempo monitoreado</span>
+                                <strong>42 h / 50 h</strong>
+                            </div>
+
+                            <div class="barra">
+                                <div class="barra-completada" style="width: 84%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="titulo-tarjeta">
+                        <div>
+                            <h2>Actividad reciente</h2>
+                            <p>Tus últimas sesiones registradas.</p>
+                        </div>
+                    </div>
+
+                    <div class="lista-actividad">
+
+                        <div class="actividad-item">
+                            <div class="icono-actividad">
+                                <i class="fa-solid fa-laptop"></i>
+                            </div>
+
+                            <div class="actividad-info">
+                                <h3>Trabajo concentrado</h3>
+                                <p>2 horas · Postura correcta: 84%</p>
+                            </div>
+
+                            <span class="estado bueno">Buen resultado</span>
+                        </div>
+
+                        <div class="actividad-item">
+                            <div class="icono-actividad">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+
+                            <div class="actividad-info">
+                                <h3>Reunión virtual</h3>
+                                <p>1 hora 20 minutos · Postura correcta: 76%</p>
+                            </div>
+
+                            <span class="estado revisar">Revisar postura</span>
+                        </div>
+
+                        <div class="actividad-item">
+                            <div class="icono-actividad">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+
+                            <div class="actividad-info">
+                                <h3>Elaboración de informe</h3>
+                                <p>1 hora 40 minutos · Postura correcta: 88%</p>
+                            </div>
+
+                            <span class="estado bueno">Buen resultado</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <aside class="columna-lateral">
+
+                <div class="tarjeta">
+
+                    <h2>Información personal</h2>
+
+                    <div class="dato">
+                        <span>Nombre</span>
+                        <strong id="datoNombre">Diego De la Cruz</strong>
+                    </div>
+
+                    <div class="dato">
+                        <span>Cargo o actividad</span>
+                        <strong id="datoCargo">Desarrollo y gestión de proyectos</strong>
+                    </div>
+
+                    <div class="dato">
+                        <span>Modalidad</span>
+                        <strong id="datoModalidad">Trabajo remoto</strong>
+                    </div>
+
+                    <div class="dato">
+                        <span>Ubicación</span>
+                        <strong id="datoUbicacion">Lima, Perú</strong>
+                    </div>
+
+                    <div class="dato">
+                        <span>Meta diaria</span>
+                        <strong id="datoMeta">8 horas de monitoreo</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h2>Preferencias</h2>
+
+                    <div class="preferencia">
+                        <div>
+                            <span>Alertas visuales</span>
+                            <small>Mostrar avisos durante la sesión</small>
+                        </div>
+
+                        <label class="switch">
+                            <input id="alertasVisuales" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="preferencia">
+                        <div>
+                            <span>Alertas sonoras</span>
+                            <small>Reproducir sonido al detectar mala postura</small>
+                        </div>
+
+                        <label class="switch">
+                            <input id="alertasSonoras" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="preferencia">
+                        <div>
+                            <span>Recordar pausas</span>
+                            <small>Avisar cuando corresponda descansar</small>
+                        </div>
+
+                        <label class="switch">
+                            <input id="recordarPausas" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <button id="btnGuardarPreferencias" class="btn-principal" type="button">
+                        Guardar preferencias
+                    </button>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h2>Accesos rápidos</h2>
+
+                    <div class="accesos">
+
+                        <a href="/trabajadores/monitoreo/monitoreo.html">
+                            <i class="fa-solid fa-video"></i>
+                            Iniciar monitoreo
+                        </a>
+
+                        <a href="/trabajadores/dashboard/dashboard.html">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Ir al dashboard
+                        </a>
+
+                        <a href="/trabajadores/perfil/perfil.html">
+                            <i class="fa-solid fa-user-pen"></i>
+                            Mi perfil
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal" id="modalEditar">
+
+        <div class="modal-contenido">
+
+            <button id="cerrarModal" class="cerrar-modal" type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>Editar perfil</h2>
+
+            <form id="formEditarPerfil">
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" type="text" value="Diego De la Cruz" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cargo">Cargo o actividad</label>
+                    <input
+                        id="cargo"
+                        type="text"
+                        value="Desarrollo y gestión de proyectos"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="modalidad">Modalidad</label>
+
+                    <select id="modalidad">
+                        <option selected>Trabajo remoto</option>
+                        <option>Trabajo híbrido</option>
+                        <option>Trabajo presencial</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="ubicacion">Ubicación</label>
+                    <input id="ubicacion" type="text" value="Lima, Perú" required>
+                </div>
+
+                <div class="campo">
+                    <label for="meta">Meta diaria</label>
+
+                    <select id="meta">
+                        <option>4 horas de monitoreo</option>
+                        <option>6 horas de monitoreo</option>
+                        <option selected>8 horas de monitoreo</option>
+                        <option>10 horas de monitoreo</option>
+                    </select>
+                </div>
+
+                <button class="btn-principal" type="submit">
+                    Guardar cambios
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="/trabajadores/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3 class="logo">Posture-Check</h3>
+                        <p class="slogan">Mejorando tu postura</p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Crea hábitos posturales más saludables durante
+                    tus jornadas de trabajo.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Trabajadores remotos</h4>
+
+                <ul>
+                    <li><a href="/trabajadores/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="/trabajadores/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="/trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="/landing/landing.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="/landing/landing.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="/landing/landing.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="perfil.js"></script>
+
+
+
+
+<script>
+    function aplicarTemaGuardado() {
+        const temaNuevo = localStorage.getItem("tema");
+        const temaAnterior = localStorage.getItem("modoOscuro");
+
+        const usarOscuro =
+            temaNuevo === "oscuro" ||
+            (temaNuevo === null && temaAnterior === "activado");
+
+        document.body.classList.toggle("modo-oscuro", usarOscuro);
+    }
+
+    aplicarTemaGuardado();
+
+    window.addEventListener("storage", aplicarTemaGuardado);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #3B7DC9;
+    --azul-hover: #2F68AA;
+    --fondo: #F7FBFF;
+    --tarjeta: #FFFFFF;
+    --texto: #27364A;
+    --texto-secundario: #65758B;
+    --borde: #D6E0EA;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Caudex", serif;
+}
+
+button,
+input,
+label,
+select,
+p,
+a,
+span {
+    font-family: "Poppins", sans-serif;
+}
+
+.login {
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+}
+
+.atras {
+    width: min(620px, 100%);
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.9rem;
+}
+
+.atras a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.login > .seccion > h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.login > .seccion > p {
+    margin: 0.6rem auto 1.7rem;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+}
+
+.login-box {
+    width: min(560px, 100%);
+    height: auto;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(39, 54, 74, 0.10);
+}
+
+.box-botones {
+    text-align: center;
+}
+
+.botones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem;
+    padding: 0.35rem;
+    background-color: #EFF3F7;
+    border-radius: 12px;
+}
+
+.botones button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 9px;
+    background-color: transparent;
+    color: var(--texto-secundario);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.botones button.activo {
+    background-color: var(--azul);
+    color: #FFFFFF;
+}
+
+.inicio-sesion h2 {
+    margin: 1.5rem 0 0.25rem;
+    font-size: 1.35rem;
+}
+
+.inicio-sesion p {
+    margin: 0 0 1.25rem;
+    color: var(--texto-secundario);
+    font-size: 0.88rem;
+    text-align: left;
+}
+
+.perfil,
+.correo,
+.rol,
+.contraseña {
+    margin-top: 1rem;
+}
+
+.contraseña {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contraseña a,
+.terminos-condiciones a {
+    color: var(--azul);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+label {
+    display: block;
+    color: var(--texto);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.formulario {
+    position: relative;
+}
+
+.icono {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--azul);
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+input,
+.box-rol select {
+    width: 100%;
+    margin-top: 0.45rem;
+    padding: 0.85rem 1rem 0.85rem 2.7rem;
+    background-color: #FBFCFE;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    outline: none;
+    color: var(--texto);
+    font-size: 0.9rem;
+}
+
+input:focus,
+.box-rol select:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(59, 125, 201, 0.14);
+}
+
+.boton-iniciar-boton,
+.boton-crear-boton {
+    width: 100%;
+    margin-top: 1.35rem;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--azul);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.boton-iniciar-boton:hover,
+.boton-crear-boton:hover {
+    background-color: var(--azul-hover);
+}
+
+.continuar {
+    margin-top: 1.2rem;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+.google-login {
+    width: min(560px, 100%);
+    margin: 0.7rem auto 0;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    background-color: #FFFFFF;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    color: var(--texto);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-google img {
+    width: 20px;
+    height: 20px;
+}
+
+.terminos-condiciones p {
+    margin: 0.8rem 0 0;
+    color: var(--texto-secundario);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+/* Modo oscuro */
+body.modo-oscuro {
+    --fondo: #0F172A;
+    --tarjeta: #1E293B;
+    --texto: #F8FAFC;
+    --texto-secundario: #CBD5E1;
+    --borde: #334155;
+}
+
+body.modo-oscuro .botones {
+    background-color: #0F172A;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro .box-rol select {
+    background-color: #0F172A;
+    color: #F8FAFC;
+}
+
+body.modo-oscuro .btn-google {
+    background-color: #162033;
+    color: #F8FAFC;
+}
+
+@media (max-width: 600px) {
+    .login {
+        padding: 1rem;
+    }
+
+    .login-box {
+        padding: 1.1rem;
+    }
+
+    .contraseña {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
