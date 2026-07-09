@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Posture-Check monitorea tu postura, envía alertas discretas y muestra tu progreso sin almacenar imágenes." data-i18n-content="meta.description" name="description"/>
+<title data-i18n="meta.title">Posture-Check | Cuida tu postura</title>
+<link href="images/logo-icon.png" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" data-i18n="a11y.skip" href="#mainContent">Saltar al contenido principal</a>
+<header class="site-header" id="home">
+<a aria-label="Ir al inicio de Posture-Check" class="brand-link" data-i18n-aria="a11y.home" href="#main-hero">
+<div class="logo">
+<img alt="" src="images/logo.png"/>
+<div class="brand-copy">
+<h1>Posture-Check</h1>
+<p data-i18n="brand.tagline">Mejorando tu postura, mejorando tu bienestar</p>
+</div>
+</div>
+</a>
+<button aria-controls="mainNavigation" aria-expanded="false" aria-label="Abrir menú de navegación" class="menu-toggle" data-i18n-aria="a11y.openMenu" id="navigationToggle" type="button">
+<i aria-hidden="true" class="fa-solid fa-bars"></i>
+</button>
+<nav aria-label="Navegación principal" class="main-nav" data-i18n-aria="a11y.mainNavigation" id="mainNavigation">
+<a data-i18n="nav.how" href="#howItWorks">Cómo funciona</a>
+<a data-i18n="nav.benefits" href="#benefits">Beneficios</a>
+<a data-i18n="nav.metrics" href="#metrics">Métricas</a>
+<a data-i18n="nav.audience" href="#audience">Para quién es</a>
+<a data-i18n="nav.testimonials" href="#testimonials">Testimonios</a>
+<a data-i18n="nav.faq" href="#faq">Preguntas frecuentes</a>
+<a data-i18n="nav.contact" href="#contact">Contacto</a>
+</nav>
+<div class="header-actions"><div class="inclusive-controls">
+<label class="visually-hidden" data-i18n="language.label" for="languageSelector">Idioma</label>
+<select aria-label="Seleccionar idioma" class="language-selector" data-i18n-aria="language.aria" id="languageSelector">
+<option lang="es" value="es">ES</option>
+<option lang="en" value="en">EN</option>
+</select>
+<div class="accessibility-wrapper">
+<button aria-controls="accessibilityPanel" aria-expanded="false" aria-label="Abrir opciones de accesibilidad" class="accessibility-toggle" data-i18n-aria="a11y.openPanel" id="accessibilityToggle" type="button">
+<i aria-hidden="true" class="fa-solid fa-universal-access"></i>
+</button>
+<div aria-label="Opciones de accesibilidad" class="accessibility-panel" data-i18n-aria="a11y.panel" hidden="" id="accessibilityPanel" role="group">
+<strong data-i18n="a11y.title">Accesibilidad</strong>
+<div class="accessibility-actions">
+<button aria-label="Reducir tamaño de texto" data-i18n-aria="a11y.decrease" id="decreaseText" type="button">A−</button>
+<button aria-label="Aumentar tamaño de texto" data-i18n-aria="a11y.increase" id="increaseText" type="button">A+</button>
+<button data-i18n="a11y.contrast" id="contrastToggle" type="button">Alto contraste</button>
+<button data-i18n="a11y.motion" id="motionToggle" type="button">Reducir movimiento</button>
+<button data-i18n="a11y.reset" id="resetAccessibility" type="button">Restablecer</button>
+</div>
+</div>
+</div>
+</div>
+<button aria-label="Activar modo oscuro" class="theme-button" data-i18n-aria="a11y.darkMode" id="themeToggle" title="Cambiar tema" type="button">
+<i aria-hidden="true" class="fa-solid fa-moon" id="themeIcon"></i>
+</button>
+<button class="login-button" data-i18n="actions.login" id="loginButton" type="button">Iniciar sesión</button>
+<button class="join-button" data-i18n="actions.start" id="headerPrimaryCta" type="button">Comenzar ahora</button>
+</div>
+</header>
+<main id="mainContent">
+<section aria-labelledby="heroTitle" class="hero" id="main-hero">
+<div class="hero-copy">
+<h1 data-i18n-html="hero.title" id="heroTitle">Corrige tu postura <span class="hero-title-accent">sin interrumpir tu rutina</span></h1>
+<p class="hero-description" data-i18n="hero.description">Detecta posturas inadecuadas, recibe alertas discretas y revisa tu progreso desde una experiencia simple.</p>
+<div class="hero-buttons">
+<button class="primary-button" data-i18n="actions.start" id="heroPrimaryCta" type="button">Comenzar ahora</button>
+<button class="secondary-button" id="demoButton" type="button">
+<i aria-hidden="true" class="fa-solid fa-chart-simple"></i><span data-i18n="actions.demo">Ver demostración</span></button>
+</div>
+<div aria-label="Características principales" class="hero-highlights" data-i18n-aria="a11y.mainFeatures">
+<div class="highlight-chip"><i aria-hidden="true" class="fa-solid fa-eye"></i><span data-i18n="hero.realtime">Tiempo real</span></div>
+<div class="highlight-chip"><i aria-hidden="true" class="fa-solid fa-bell"></i><span data-i18n="hero.discreetAlerts">Alertas discretas</span></div>
+<div class="highlight-chip"><i aria-hidden="true" class="fa-solid fa-lock"></i><span data-i18n="hero.localProcessing">Procesamiento local</span></div>
+</div>
+</div>
+<div class="hero-image">
+<img alt="Persona usando Posture-Check frente a una computadora" data-i18n-alt="images.heroAlt" src="images/hero-posture.png"/>
+<div aria-label="Estado postural de ejemplo" class="hero-status" data-i18n-aria="a11y.exampleStatus">
+<span class="status-dot status-ok"></span>
+<div><strong data-i18n="status.correctPosture">Postura correcta</strong><small data-i18n="status.activeMonitoring">Monitoreo activo</small></div>
+<b>92%</b>
+</div>
+</div>
+</section>
+<section aria-labelledby="howItWorksTitle" class="section-shell steps-section" id="howItWorks">
+<div class="section-heading">
+<span class="section-kicker" data-i18n="how.kicker">Tres pasos</span>
+<h2 data-i18n="how.title" id="howItWorksTitle">¿Cómo funciona?</h2>
+<p data-i18n="how.description">Activa el monitoreo, recibe retroalimentación y reconoce tu progreso sin procesos complicados.</p>
+</div>
+<div class="steps-grid">
+<article class="step-card">
+<span class="step-number">01</span>
+<div class="step-icon"><i aria-hidden="true" class="fa-solid fa-camera"></i></div>
+<h3 data-i18n="how.step1.title">Activa el monitoreo</h3>
+<p data-i18n="how.step1.description">Autoriza la cámara y calibra tu posición en pocos segundos.</p>
+</article>
+<article class="step-card">
+<span class="step-number">02</span>
+<div class="step-icon"><i aria-hidden="true" class="fa-solid fa-bell"></i></div>
+<h3 data-i18n="how.step2.title">Recibe alertas discretas</h3>
+<p data-i18n="how.step2.description">Corrige tu postura sin perder la concentración en tu actividad.</p>
+</article>
+<article class="step-card">
+<span class="step-number">03</span>
+<div class="step-icon"><i aria-hidden="true" class="fa-solid fa-chart-line"></i></div>
+<h3 data-i18n="how.step3.title">Revisa tu progreso</h3>
+<p data-i18n="how.step3.description">Consulta métricas, historial y pausas realizadas durante la semana.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="benefitsTitle" class="section-shell benefits-section" id="benefits">
+<div class="section-heading">
+<span class="section-kicker" data-i18n="benefits.kicker">Valor inmediato</span>
+<h2 data-i18n="benefits.title" id="benefitsTitle">Lo esencial, fácil de reconocer</h2>
+<p data-i18n="benefits.description">Información breve, visual y organizada para comprender la propuesta en la primera visita.</p>
+</div>
+<div class="benefit-grid">
+<article class="benefit-card">
+<div class="benefit-icon"><i aria-hidden="true" class="fa-solid fa-person-rays"></i></div>
+<div><h3 data-i18n="benefits.detection.title">Detección inteligente</h3><p data-i18n="benefits.detection.description">Identifica desviaciones de cuello, hombros y espalda.</p></div>
+</article>
+<article class="benefit-card">
+<div class="benefit-icon"><i aria-hidden="true" class="fa-solid fa-sliders"></i></div>
+<div><h3 data-i18n="benefits.alerts.title">Alertas configurables</h3><p data-i18n="benefits.alerts.description">Elige frecuencia, sonido, vibración o aviso visual.</p></div>
+</article>
+<article class="benefit-card">
+<div class="benefit-icon"><i aria-hidden="true" class="fa-solid fa-chart-pie"></i></div>
+<div><h3 data-i18n="benefits.progress.title">Progreso visible</h3><p data-i18n="benefits.progress.description">Reconoce tendencias mediante porcentajes y gráficos simples.</p></div>
+</article>
+<article class="benefit-card">
+<div class="benefit-icon"><i aria-hidden="true" class="fa-solid fa-user-shield"></i></div>
+<div><h3 data-i18n="benefits.privacy.title">Privacidad local</h3><p data-i18n="benefits.privacy.description">Analiza la postura sin almacenar imágenes ni videos.</p></div>
+</article>
+</div>
+</section>
+<section aria-labelledby="metricsTitle" class="metrics-section" id="metrics">
+<div class="section-shell metrics-shell">
+<div class="section-heading metrics-heading">
+<span class="section-kicker" data-i18n="metrics.kicker">Estado del sistema</span>
+<h2 data-i18n="metrics.title" id="metricsTitle">Tu postura, de un vistazo</h2>
+<p data-i18n="metrics.description">Vista demostrativa de cómo Posture-Check transforma el monitoreo en retroalimentación comprensible.</p>
+</div>
+<div class="dashboard-layout">
+<div aria-label="Panel de métricas de ejemplo" class="dashboard-preview" data-i18n-aria="a11y.metricsPanel">
+<div class="dashboard-topbar">
+<div><small data-i18n="metrics.todaySummary">Resumen de hoy</small><h3 data-i18n="metrics.posturalProgress">Tu progreso postural</h3></div>
+<span class="demo-badge" data-i18n="metrics.demoView">Vista de ejemplo</span>
+</div>
+<div class="current-state">
+<div class="state-main">
+<span class="state-icon state-icon-ok"><i aria-hidden="true" class="fa-solid fa-check"></i></span>
+<div><small data-i18n="metrics.currentStatus">Estado actual</small><strong data-i18n="status.correctPosture">Postura correcta</strong><p data-i18n="metrics.keepPosition">Mantén esta posición.</p></div>
+</div>
+<div aria-label="82 por ciento de postura correcta" class="progress-ring" data-i18n-aria="a11y.progress82" style="--progress: 82"><span>82%</span></div>
+</div>
+<div class="metric-cards">
+<div class="metric-card"><i aria-hidden="true" class="fa-regular fa-clock"></i><span><b>2 h 24 min</b><small data-i18n="metrics.monitoredTime">Tiempo monitoreado</small></span></div>
+<div class="metric-card"><i aria-hidden="true" class="fa-regular fa-bell"></i><span><b>3</b><small data-i18n="metrics.alertsReceived">Alertas recibidas</small></span></div>
+<div class="metric-card"><i aria-hidden="true" class="fa-solid fa-person-walking"></i><span><b>2</b><small data-i18n="metrics.breaksCompleted">Pausas completadas</small></span></div>
+</div>
+<div class="weekly-card">
+<div class="weekly-header"><div><small data-i18n="metrics.lastSevenDays">Últimos 7 días</small><h4 data-i18n="status.correctPosture">Postura correcta</h4></div><strong>+12%</strong></div>
+<div aria-label="Gráfico semanal de postura correcta con tendencia ascendente" class="chart" data-i18n-aria="a11y.weeklyChart" role="img">
+<div class="bar-item"><span class="bar" style="--height:56%"></span><small data-i18n="days.mon">L</small></div>
+<div class="bar-item"><span class="bar" style="--height:64%"></span><small data-i18n="days.tue">M</small></div>
+<div class="bar-item"><span class="bar" style="--height:59%"></span><small data-i18n="days.wed">M</small></div>
+<div class="bar-item"><span class="bar" style="--height:72%"></span><small data-i18n="days.thu">J</small></div>
+<div class="bar-item"><span class="bar" style="--height:76%"></span><small data-i18n="days.fri">V</small></div>
+<div class="bar-item"><span class="bar" style="--height:80%"></span><small data-i18n="days.sat">S</small></div>
+<div class="bar-item"><span class="bar active" style="--height:88%"></span><small data-i18n="days.sun">D</small></div>
+</div>
+</div>
+</div>
+<aside aria-label="Estados e historial de ejemplo" class="feedback-panel" data-i18n-aria="a11y.feedbackPanel">
+<div class="panel-block">
+<h3 data-i18n="feedback.title">Reconoce tu estado</h3>
+<p data-i18n="feedback.description">Los íconos y textos acompañan al color para facilitar la comprensión.</p>
+<div class="state-list">
+<div class="state-row"><span class="state-icon state-icon-ok"><i aria-hidden="true" class="fa-solid fa-check"></i></span><div><b data-i18n="feedback.correct">Correcta</b><small data-i18n="feedback.keepGoing">Continúa así</small></div></div>
+<div class="state-row"><span class="state-icon state-icon-warning"><i aria-hidden="true" class="fa-solid fa-exclamation"></i></span><div><b data-i18n="feedback.attention">Atención</b><small data-i18n="feedback.adjust">Ajusta cuello y hombros</small></div></div>
+<div class="state-row"><span class="state-icon state-icon-risk"><i aria-hidden="true" class="fa-solid fa-arrow-rotate-left"></i></span><div><b data-i18n="feedback.correction">Corrección</b><small data-i18n="feedback.changePosition">Cambia de posición</small></div></div>
+</div>
+</div>
+<div class="panel-block history-block">
+<div class="history-title"><h3 data-i18n="history.title">Historial reciente</h3><span data-i18n="history.today">Hoy</span></div>
+<div class="history-item"><span class="history-dot warning"></span><div><b data-i18n="history.preventiveAlert">Alerta preventiva</b><small data-i18n="history.neckTilt">10:42 · Cuello inclinado</small></div></div>
+<div class="history-item"><span class="history-dot ok"></span><div><b data-i18n="history.corrected">Postura corregida</b><small data-i18n="history.improvement">10:43 · Mejora detectada</small></div></div>
+<div class="history-item"><span class="history-dot pause"></span><div><b data-i18n="history.breakCompleted">Pausa completada</b><small data-i18n="history.twoMinutes">11:20 · 2 minutos</small></div></div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<section aria-labelledby="audienceTitle" class="section-shell audience-section" id="audience">
+<div class="section-heading">
+<span class="section-kicker" data-i18n="audience.kicker">Experiencia personalizada</span>
+<h2 data-i18n="audience.title" id="audienceTitle">Una solución para tu rutina</h2>
+<p data-i18n="audience.description">Elige el contexto que más se parece a ti.</p>
+</div>
+<div class="audience-grid">
+<article class="img-container">
+<img alt="Estudiante universitario frente a una computadora" data-i18n-alt="images.studentAlt" src="images/student.png"/>
+<div class="image-content"><span class="audience-tag" data-i18n="audience.study">Estudio</span><h3 data-i18n="audience.students">Estudiantes</h3><p data-i18n="audience.studentsDescription">Alertas sutiles durante clases, tareas y sesiones de estudio.</p></div>
+</article>
+<article class="img-container">
+<img alt="Trabajadora remota usando una computadora portátil" data-i18n-alt="images.workerAlt" src="images/remote-worker.png"/>
+<div class="image-content"><span class="audience-tag" data-i18n="audience.work">Trabajo</span><h3 data-i18n="audience.remoteWorkers">Trabajadores remotos</h3><p data-i18n="audience.workDescription">Seguimiento durante reuniones y jornadas de concentración.</p></div>
+</article>
+<article class="img-container">
+<img alt="Jugador durante una partida" data-i18n-alt="images.gamerAlt" src="images/gamer.png"/>
+<div class="image-content"><span class="audience-tag" data-i18n="audience.gaming">Juego</span><h3 data-i18n="audience.gamers">Jugadores</h3><p data-i18n="audience.gamingDescription">Avisos configurables que respetan los momentos importantes.</p></div>
+</article>
+</div>
+</section>
+<section class="testimonials-section" id="testimonials">
+<h2 data-i18n="testimonials.title">Lo que dicen nuestros usuarios</h2>
+<p class="section-subtitle" data-i18n="testimonials.description">Experiencias reales de personas que mejoraron su bienestar con Posture-Check.</p>
+<div class="testimonial-grid">
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="testimonials.studentQuote">“Posture-Check me ayudó a darme cuenta de cuánto tiempo pasaba encorvada mientras estudiaba. Ahora tengo mejores hábitos y menos dolor de espalda.”</p>
+<div class="testimonial-user">
+<img alt="María López" src="images/profile-student.png"/>
+<div>
+<h4>María López</h4>
+<span data-i18n="testimonials.studentRole">Estudiante universitaria</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="testimonials.workerQuote">“Trabajo muchas horas frente a la computadora y las alertas me ayudan a corregirme a tiempo. La app es simple y muy útil.”</p>
+<div class="testimonial-user">
+<img alt="Carlos Rivera" src="images/profile-worker.png"/>
+<div>
+<h4>Carlos Rivera</h4>
+<span data-i18n="testimonials.workerRole">Programador remoto</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p class="testimonial-text" data-i18n="testimonials.gamerQuote">“Antes terminaba mis sesiones de juego con tensión en el cuello. Ahora hago pausas activas y siento una gran diferencia.”</p>
+<div class="testimonial-user">
+<img alt="Claudia Vélez" src="images/profile-gamer.png"/>
+<div>
+<h4>Claudia Vélez</h4>
+<span data-i18n="testimonials.gamerRole">Jugador frecuente</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="faqTitle" class="faq-section" id="faq">
+<div class="section-heading">
+<span class="section-kicker" data-i18n="faq.kicker">Ayuda rápida</span>
+<h2 data-i18n="faq.title" id="faqTitle">Preguntas frecuentes</h2>
+<p data-i18n="faq.description">Respuestas breves para reconocer cómo funciona la plataforma.</p>
+</div>
+<div class="faq-container">
+<details><summary data-i18n="faq.q1">¿Cómo funciona el monitoreo postural?</summary><p data-i18n="faq.a1">La cámara analiza puntos de referencia de tu postura y muestra un estado visual. Si una posición inadecuada se mantiene, recibes una alerta discreta.</p></details>
+<details><summary data-i18n="faq.q2">¿La aplicación guarda mis imágenes o videos?</summary><p data-i18n="faq.a2">No. El procesamiento se realiza localmente y las imágenes no se almacenan ni se comparten.</p></details>
+<details><summary data-i18n="faq.q3">¿Puedo personalizar las alertas?</summary><p data-i18n="faq.a3">Sí. Puedes ajustar la frecuencia y elegir avisos visuales, sonoros o por vibración.</p></details>
+<details><summary data-i18n="faq.q4">¿Qué información aparece en mi progreso?</summary><p data-i18n="faq.a4">Tiempo monitoreado, porcentaje de postura correcta, alertas, pausas e historial semanal.</p></details>
+<details><summary data-i18n="faq.q5">¿A quién está dirigida la aplicación?</summary><p data-i18n="faq.a5">A estudiantes universitarios, trabajadores remotos y jugadores que pasan varias horas frente a una pantalla.</p></details>
+</div>
+</section>
+<section aria-labelledby="contactTitle" class="contact-section" id="contact">
+<div class="section-heading">
+<span class="section-kicker" data-i18n="nav.contact">Contacto</span>
+<h2 data-i18n="contact.title" id="contactTitle">¿Necesitas ayuda?</h2>
+<p data-i18n="contact.description">Completa el formulario y recibe una confirmación inmediata.</p>
+</div>
+<div class="contact-box">
+<form class="contact-form" id="contactForm" novalidate="">
+<div class="form-grid">
+<div class="form-field">
+<label for="fullName"><span data-i18n="contact.name">Nombre completo</span><span aria-hidden="true">*</span></label>
+<input aria-describedby="nameError" aria-invalid="false" autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" id="fullName" minlength="2" name="fullName" placeholder="Tu nombre" required="" type="text"/>
+<small aria-live="polite" class="field-error" id="nameError" role="alert"></small>
+</div>
+<div class="form-field">
+<label for="email"><span data-i18n="contact.email">Correo electrónico</span><span aria-hidden="true">*</span></label>
+<input aria-describedby="emailError" aria-invalid="false" autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" id="email" name="email" placeholder="nombre@correo.com" required="" type="email"/>
+<small aria-live="polite" class="field-error" id="emailError" role="alert"></small>
+</div>
+<div class="form-field form-field-full">
+<label for="message"><span data-i18n="contact.message">Mensaje</span><span aria-hidden="true">*</span></label>
+<textarea aria-describedby="messageError" aria-invalid="false" data-i18n-placeholder="contact.messagePlaceholder" id="message" maxlength="500" minlength="10" name="message" placeholder="Cuéntanos cómo podemos ayudarte..." required="" rows="6"></textarea>
+<div class="field-meta"><small aria-live="polite" class="field-error" id="messageError" role="alert"></small><small id="messageCounter">0/500</small></div>
+</div>
+</div>
+<button class="submit-button" id="submitContact" type="submit">
+<span data-i18n="contact.submit">Enviar mensaje</span><i aria-hidden="true" class="fa-solid fa-paper-plane"></i>
+</button>
+<p aria-live="polite" class="form-status" id="formStatus" role="status"></p>
+</form>
+</div>
+</section>
+<section aria-labelledby="finalCtaTitle" class="final-cta">
+<span class="section-kicker" data-i18n="cta.kicker">Empieza hoy</span>
+<h2 data-i18n="cta.title" id="finalCtaTitle">¿Listo para mejorar tu postura?</h2>
+<p data-i18n="cta.description">Construye hábitos más saludables mientras estudias, trabajas o juegas.</p>
+<div class="final-cta-actions">
+<button class="final-cta-primary" data-i18n="actions.start" id="finalPrimaryCta" type="button">Comenzar ahora</button>
+<button class="final-cta-secondary" data-i18n="actions.metrics" id="finalMetricsButton" type="button">Ver métricas</button>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-column brand-column">
+<div class="footer-logo"><img alt="" src="images/logo.png"/><div><h3 class="logo">Posture-Check</h3><p class="tagline" data-i18n="brand.taglinePeriod">Mejorando tu postura, mejorando tu bienestar.</p></div></div>
+<p class="description" data-i18n="footer.description">Monitoreo preventivo con retroalimentación visual, alertas discretas y privacidad local.</p>
+</div>
+<div class="footer-column"><h4 data-i18n="footer.product">Producto</h4><ul><li><a data-i18n="nav.how" href="#howItWorks">Cómo funciona</a></li><li><a data-i18n="nav.benefits" href="#benefits">Beneficios</a></li><li><a data-i18n="nav.metrics" href="#metrics">Métricas</a></li></ul></div>
+<div class="footer-column"><h4 data-i18n="footer.users">Usuarios</h4><ul><li><a data-i18n="audience.students" href="#audience">Estudiantes</a></li><li><a data-i18n="audience.remoteWorkers" href="#audience">Trabajadores remotos</a></li><li><a data-i18n="audience.gamers" href="#audience">Jugadores</a></li></ul></div>
+<div class="footer-column"><h4 data-i18n="footer.help">Ayuda</h4><ul><li><a data-i18n="faq.title" href="#faq">Preguntas frecuentes</a></li><li><a data-i18n="nav.contact" href="#contact">Contacto</a></li><li><a data-i18n="footer.support" href="#contact">Soporte</a></li></ul></div>
+<div class="footer-column social-column"><h4 data-i18n="footer.social">Redes sociales</h4><div class="social-links"><a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a><a aria-label="WhatsApp" href="#"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+</div>
+<hr/>
+<div class="footer-copy"><p data-i18n="footer.copyright">© 2026 Posture-Check. Todos los derechos reservados.</p></div>
+</footer>
+<button aria-label="Volver al home" class="back-to-top" data-i18n-aria="a11y.backToTop" id="backToTop" type="button"><i aria-hidden="true" class="fa-solid fa-arrow-up"></i></button>
+<div aria-live="polite" class="toast" id="toast" role="status"><i aria-hidden="true" class="fa-solid fa-circle-check"></i><span data-i18n="contact.success">Tu mensaje fue enviado correctamente.</span></div>
+
+<script src="main.js"></script></body>
+</html>

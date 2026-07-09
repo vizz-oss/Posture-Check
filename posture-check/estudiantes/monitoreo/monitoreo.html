@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoreo postural | Posture-Check</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="monitoreo.css">
+    <link rel="stylesheet" href="../../common/app-shell.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="../../estudiantes/dashboard/dashboard.html">Panel</a>
+            <a href="../../estudiantes/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="../../estudiantes/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-regular fa-user"></i>
+                <span>Estudiante</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <a href="../../estudiantes/perfil/perfil.html">
+                            Mi perfil
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Configuración
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../landing/index.html">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="seccion-publicar">
+            <h1>Iniciar monitoreo postural</h1>
+
+            <p>
+                Configura tu sesión y permite que Posture-Check analice tu postura.
+            </p>
+        </div>
+
+
+        <div class="contenedor">
+
+            <h2>Acceso a la cámara</h2>
+
+            <p class="subtexto">
+                La cámara se utilizará únicamente para detectar tu postura en tiempo real.
+            </p>
+
+            <div class="subir-obra posture-camera-card">
+
+                <div class="posture-camera-stage" id="studentCameraStage">
+                    <div class="camara-placeholder" id="camaraPlaceholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <h3>Cámara desactivada</h3>
+                        <p>Activa la cámara para comenzar el monitoreo postural.</p>
+                    </div>
+                    <video id="videoCamara" autoplay playsinline muted></video>
+                    <div class="estado-postura" id="estadoPostura">Cámara desactivada</div>
+                </div>
+
+                <div class="acciones-camara">
+                    <button class="boton" id="btnActivarCamara" type="button">
+                        <i class="fa-solid fa-camera"></i> Activar cámara
+                    </button>
+                    <button class="boton boton-secundario" id="btnDetenerCamara" type="button" disabled>
+                        <i class="fa-solid fa-video-slash"></i> Detener cámara
+                    </button>
+                </div>
+
+                <p class="posture-estimation-note">
+                    La estimación visual es orientativa y no reemplaza una evaluación profesional.
+                </p>
+
+            </div>
+
+
+            <div class="formatos">
+
+                <strong>Privacidad y seguridad</strong>
+
+                <p>
+                    Posture-Check solo utiliza la cámara durante la sesión de monitoreo.
+                    Puedes detenerla en cualquier momento desde este panel.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="contenedor-detalles">
+
+            <h2>Configuración de la sesión</h2>
+
+            <p class="subtexto">
+                Personaliza el monitoreo según la actividad que realizarás.
+            </p>
+
+            <div>
+                <label for="actividad">Tipo de actividad *</label>
+
+                <select id="actividad">
+                    <option value="" disabled selected>
+                        Selecciona una actividad
+                    </option>
+                    <option value="estudio">Sesión de estudio</option>
+                    <option value="clase">Clase virtual</option>
+                    <option value="trabajo">Trabajo académico</option>
+                    <option value="lectura">Lectura</option>
+                    <option value="reunion">Reunión grupal</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="duracion">Duración aproximada *</label>
+
+                <select id="duracion">
+                    <option value="30">30 minutos</option>
+                    <option value="60">1 hora</option>
+                    <option value="90">1 hora 30 minutos</option>
+                    <option value="120">2 horas</option>
+                    <option value="180">3 horas</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="frecuencia">Frecuencia de alertas *</label>
+
+                <select id="frecuencia">
+                    <option value="5">Cada 5 minutos</option>
+                    <option value="10">Cada 10 minutos</option>
+                    <option value="15">Cada 15 minutos</option>
+                    <option value="30">Cada 30 minutos</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="tipoAlerta">Tipo de alerta *</label>
+
+                <select id="tipoAlerta">
+                    <option value="visual">Alerta visual</option>
+                    <option value="sonora">Alerta sonora</option>
+                    <option value="ambas">Visual y sonora</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="objetivo">Objetivo de la sesión</label>
+
+                <input
+                    id="objetivo"
+                    type="text"
+                    placeholder="Ejemplo: mantener la espalda recta">
+            </div>
+
+            <div>
+                <label for="notas">Notas adicionales</label>
+
+                <input
+                    id="notas"
+                    type="text"
+                    placeholder="Agrega una observación para esta sesión">
+            </div>
+
+        </div>
+
+
+        <div class="contenedor-etiquetas">
+
+            <h2>Zonas que deseas cuidar</h2>
+
+            <p class="subtexto">
+                Selecciona las partes del cuerpo que requieren mayor atención.
+            </p>
+
+            <div class="chips-sugeridas">
+                <span class="chip sugerida"><i class="fa-solid fa-user-check" aria-hidden="true"></i>Cuello</span>
+                <span class="chip sugerida">Espalda</span>
+                <span class="chip sugerida">Hombros</span>
+                <span class="chip sugerida">Brazos</span>
+                <span class="chip sugerida">Muñecas</span>
+                <span class="chip sugerida">Posición de pantalla</span>
+            </div>
+
+            <div id="chips-container" class="chips-container"></div>
+
+        </div>
+
+
+        <div class="acciones-final">
+
+            <button class="btn-borrador" id="btnCancelar" type="button">
+                Cancelar
+            </button>
+
+            <button class="btn-publicar" id="btnIniciarSesion" type="button">
+                <i class="fa-solid fa-play"></i> Iniciar monitoreo
+            </button>
+
+            <button class="btn-borrador" id="btnFinalizarSesion" type="button" disabled>
+                <i class="fa-solid fa-stop"></i> Finalizar sesión
+            </button>
+
+        </div>
+
+        <section class="student-session-summary" aria-labelledby="studentSessionSummaryTitle">
+            <div class="student-summary-heading">
+                <div>
+                    <h2 id="studentSessionSummaryTitle">Resumen de la sesión</h2>
+                    <p>Los datos se actualizan durante el monitoreo.</p>
+                </div>
+            </div>
+            <div class="student-summary-grid">
+                <article><i class="fa-regular fa-clock"></i><span>Tiempo transcurrido</span><strong id="tiempoSesion">00:00:00</strong></article>
+                <article><i class="fa-solid fa-user-check"></i><span>Postura correcta</span><strong id="porcentajePostura">0%</strong></article>
+                <article><i class="fa-regular fa-bell"></i><span>Alertas</span><strong id="cantidadAlertas">0</strong></article>
+                <article><i class="fa-solid fa-person-walking"></i><span>Pausas activas</span><strong id="cantidadPausas">0</strong></article>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3 class="logo">Posture-Check</h3>
+
+                        <p class="slogan">
+                            Mejorando tu postura, mejorando tu bienestar
+                        </p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Una solución inteligente que ayuda a estudiantes,
+                    trabajadores remotos y jugadores a mejorar sus hábitos posturales.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Estudiantes</h4>
+
+                <ul>
+                    <li>
+                        <a href="../../estudiantes/dashboard/dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../estudiantes/monitoreo/monitoreo.html">
+                            Monitoreo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../estudiantes/perfil/perfil.html">
+                            Mi perfil
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li>
+                        <a href="../../landing/index.html#comoFunciona">
+                            Cómo funciona
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../landing/index.html#NuestrosBeneficios">
+                            Beneficios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../landing/index.html#preguntasFrecuentes">
+                            Preguntas frecuentes
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Soporte</h4>
+
+                <ul>
+                    <li>
+                        <a href="../../landing/index.html#contacto">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Configuración
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../landing/index.html">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+<script src="../../common/app-shell.js"></script>
+    <script src="../../common/posture-monitor.js"></script>
+    <script src="../../common/app-features.js"></script>
+</body>
+</html>

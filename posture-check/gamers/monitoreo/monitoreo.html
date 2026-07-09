@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoreo Gamer | Posture-Check</title>
+
+    <link rel="stylesheet" href="monitoreo.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../../common/app-shell.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="../../gamers/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Juega mejor, cuida tu postura</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="../../gamers/dashboard/dashboard.html">Panel</a>
+            <a href="../../gamers/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="../../gamers/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Jugador</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="../../gamers/perfil/perfil.html">Mi perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="../../landing/index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero-monitoreo">
+
+            <div class="hero-contenido">
+                <span class="etiqueta">Sesión saludable de juego</span>
+
+                <h1>Monitorea tu postura mientras juegas</h1>
+
+                <p>
+                    Activa la cámara, configura tus alertas y recibe avisos
+                    durante tus partidas para mantener una postura más saludable.
+                </p>
+            </div>
+
+            <div class="hero-icono">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+
+        </section>
+
+
+        <section class="contenedor-principal">
+
+            <div class="panel-camara">
+
+                <div class="vista-camara">
+
+                    <div class="camara-placeholder" id="camaraPlaceholder">
+                        <i class="fa-solid fa-video"></i>
+                        <h2>Cámara desactivada</h2>
+                        <p>Activa la cámara para iniciar el análisis postural.</p>
+                    </div>
+
+                    <video id="videoCamara" autoplay playsinline muted></video>
+
+                    <div class="estado-postura" id="estadoPostura">
+                        Esperando inicio
+                    </div>
+
+                </div>
+
+
+                <div class="acciones-camara">
+
+                    <button id="btnActivarCamara" class="btn-principal" type="button">
+                        <i class="fa-solid fa-camera"></i>
+                        Activar cámara
+                    </button>
+
+                    <button id="btnDetenerCamara" class="btn-secundario" type="button" disabled>
+                        <i class="fa-solid fa-video-slash"></i>
+                        Detener cámara
+                    </button>
+
+                </div>
+
+
+                <div class="mensaje-privacidad">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <h3>Tu privacidad está protegida</h3>
+
+                        <p>
+                            La cámara se usa únicamente durante el monitoreo.
+                            Posture-Check no guarda tus imágenes.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel-configuracion">
+
+                <h2>Configura tu partida</h2>
+
+                <p class="subtexto">
+                    Personaliza las alertas según el tipo y duración de tu sesión de juego.
+                </p>
+
+
+                <div class="campo">
+                    <label for="tipoJuego">Tipo de juego</label>
+
+                    <select id="tipoJuego">
+                        <option value="" disabled selected>Selecciona una categoría</option>
+                        <option value="competitivo">Competitivo</option>
+                        <option value="casual">Casual</option>
+                        <option value="estrategia">Estrategia</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="simulacion">Simulación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="duracion">Duración estimada</label>
+
+                    <select id="duracion">
+                        <option value="30">30 minutos</option>
+                        <option value="60">1 hora</option>
+                        <option value="120" selected>2 horas</option>
+                        <option value="180">3 horas</option>
+                        <option value="240">4 horas</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="frecuencia">Frecuencia de alertas</label>
+
+                    <select id="frecuencia">
+                        <option value="5">Cada 5 minutos</option>
+                        <option value="10" selected>Cada 10 minutos</option>
+                        <option value="15">Cada 15 minutos</option>
+                        <option value="30">Cada 30 minutos</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="tipoAlerta">Tipo de alerta</label>
+
+                    <select id="tipoAlerta">
+                        <option value="visual" selected>Visual</option>
+                        <option value="sonora">Sonora</option>
+                        <option value="ambas">Visual y sonora</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label>Zonas a supervisar</label>
+
+                    <div class="chips">
+
+                        <button class="chip activo" type="button"><i class="fa-solid fa-user-check" aria-hidden="true"></i>Cuello</button>
+                        <button class="chip activo" type="button">Espalda</button>
+                        <button class="chip activo" type="button">Hombros</button>
+                        <button class="chip" type="button">Brazos</button>
+                        <button class="chip" type="button">Muñecas</button>
+                        <button class="chip" type="button">Distancia a la pantalla</button>
+
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <label for="objetivo">Objetivo de la partida</label>
+
+                    <input
+                        id="objetivo"
+                        type="text"
+                        placeholder="Ejemplo: mantener una postura estable durante la partida">
+                </div>
+
+
+                <div class="acciones-sesion">
+
+                    <button id="btnIniciarSesion" class="btn-principal" type="button">
+                        <i class="fa-solid fa-play"></i>
+                        Iniciar monitoreo
+                    </button>
+
+                    <button id="btnFinalizarSesion" class="btn-secundario" type="button" disabled>
+                        <i class="fa-solid fa-stop"></i>
+                        Finalizar sesión
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="resumen-sesion">
+
+            <div class="titulo-resumen">
+                <div>
+                    <h2>Resumen de la partida</h2>
+                    <p>Los datos se actualizarán mientras la sesión esté activa.</p>
+                </div>
+            </div>
+
+            <div class="tarjetas-resumen">
+
+                <div class="tarjeta">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Tiempo transcurrido</span>
+                    <strong id="tiempoSesion">00:00:00</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-solid fa-user-check"></i>
+                    <span>Postura correcta</span>
+                    <strong id="porcentajePostura">0%</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Alertas</span>
+                    <strong id="cantidadAlertas">0</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <span>Pausas activas</span>
+                    <strong id="cantidadPausas">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="../../gamers/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3>Posture-Check</h3>
+                        <p>Juega mejor, cuida tu postura</p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Monitorea tu postura y crea hábitos más saludables
+                    durante tus sesiones de juego.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Gamers</h4>
+
+                <ul>
+                    <li><a href="../../gamers/dashboard/dashboard.html">Panel</a></li>
+                    <li><a href="../../gamers/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="../../gamers/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="../../landing/index.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="../../landing/index.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="../../landing/index.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <script src="../../common/app-shell.js"></script>
+    <script src="../../common/posture-monitor.js"></script>
+    <script src="../../common/app-features.js"></script>
+</body>
+</html>

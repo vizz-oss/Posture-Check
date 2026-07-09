@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel del trabajador remoto | Posture-Check</title>
+
+    <link rel="icon" href="imagenes/logoIcono.png">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../../common/app-shell.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="../../trabajadores/dashboard/dashboard.html">Panel</a>
+            <a href="../../trabajadores/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="../../trabajadores/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Trabajador remoto</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="../../trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="../../landing/index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="principal">
+
+        <section class="hero-dashboard hero-trabajador">
+
+            <div class="hero-contenido">
+
+                <span class="etiqueta-hero">
+                    Panel trabajador remoto
+                </span>
+
+                <h1>
+                    Cuida tu postura durante tu jornada
+                </h1>
+
+                <p>
+                    Revisa tus sesiones, controla tus alertas y mejora tus hábitos
+                    durante reuniones, programación y trabajo desde casa.
+                </p>
+
+                <button
+                    id="btnIniciarMonitoreo"
+                    class="btn-principal"
+                    type="button">
+
+                    <i class="fa-solid fa-play"></i>
+                    Iniciar monitoreo
+
+                </button>
+
+            </div>
+
+            <div class="hero-icono">
+                <i class="fa-solid fa-laptop"></i>
+            </div>
+
+        </section>
+
+
+        <section class="resumen-jornada">
+
+            <div class="tarjeta-resumen">
+                <div class="icono-resumen">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div>
+                    <p class="etiqueta">Tiempo monitoreado</p>
+                    <h3>6 h 20 min</h3>
+                    <span>Durante la jornada de hoy</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-resumen">
+                <div class="icono-resumen">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+                    <p class="etiqueta">Postura correcta</p>
+                    <h3>81%</h3>
+                    <span>↑ 6% frente a la semana pasada</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-resumen">
+                <div class="icono-resumen">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+
+                <div>
+                    <p class="etiqueta">Alertas recibidas</p>
+                    <h3>9</h3>
+                    <span>3 menos que ayer</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-resumen">
+                <div class="icono-resumen">
+                    <i class="fa-solid fa-person-walking"></i>
+                </div>
+
+                <div>
+                    <p class="etiqueta">Pausas activas</p>
+                    <h3>4</h3>
+                    <span>Meta diaria completada</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="explorar">
+
+            <aside class="filtros">
+
+                <h3>Configuración rápida</h3>
+
+                <div class="filtro-box">
+                    <label for="duracionJornada">Duración de la jornada</label>
+
+                    <select id="duracionJornada">
+                        <option>4 horas</option>
+                        <option>6 horas</option>
+                        <option selected>8 horas</option>
+                        <option>10 horas</option>
+                    </select>
+                </div>
+
+                <div class="filtro-box">
+                    <label for="frecuenciaAlertas">Frecuencia de alertas</label>
+
+                    <select id="frecuenciaAlertas">
+                        <option>Cada 10 minutos</option>
+                        <option selected>Cada 15 minutos</option>
+                        <option>Cada 30 minutos</option>
+                        <option>Cada 45 minutos</option>
+                    </select>
+                </div>
+
+                <div class="filtro-box">
+                    <label for="tipoAlerta">Tipo de alerta</label>
+
+                    <select id="tipoAlerta">
+                        <option selected>Visual</option>
+                        <option>Sonora</option>
+                        <option>Visual y sonora</option>
+                    </select>
+                </div>
+
+                <div class="filtro-box">
+                    <label for="objetivoPostural">Objetivo postural</label>
+
+                    <select id="objetivoPostural">
+                        <option selected>Mejorar la postura general</option>
+                        <option>Reducir tensión en el cuello</option>
+                        <option>Evitar encorvar la espalda</option>
+                        <option>Mejorar la posición de hombros</option>
+                    </select>
+                </div>
+
+                <button class="limpiar" id="guardarConfiguracion" type="button">
+                    Guardar configuración
+                </button>
+
+            </aside>
+
+
+            <div class="contenido">
+
+                <div class="top-bar">
+
+                    <div class="tabs">
+                        <button id="btnResumen" class="active" type="button">
+                            Resumen
+                        </button>
+
+                        <button id="btnProgreso" type="button">
+                            Progreso
+                        </button>
+
+                        <button id="btnRecomendaciones" type="button">
+                            Recomendaciones
+                        </button>
+                    </div>
+
+                    <button id="btnRestablecer" class="reset" type="button">
+                        Restablecer datos de demostración
+                    </button>
+
+                </div>
+
+
+                <div id="msgResumen" class="seccion-panel">
+
+                    <h2>Resumen de tu jornada</h2>
+
+                    <p class="sub">
+                        Información basada en tus sesiones de trabajo recientes
+                    </p>
+
+                    <div class="cards">
+
+                        <div class="card">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-laptop"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Reunión virtual</h3>
+                                <p class="autor">Duración: 1 hora 15 minutos</p>
+
+                                <span class="tag">Postura correcta: 84%</span>
+
+                                <div class="precio-btn">
+                                    <span class="precio">2 alertas</span>
+
+                                    <button class="btn-comprar" type="button">
+                                        <i class="fa-solid fa-eye"></i>
+                                        Ver detalle
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Trabajo concentrado</h3>
+                                <p class="autor">Duración: 2 horas</p>
+
+                                <span class="tag">Postura correcta: 78%</span>
+
+                                <div class="precio-btn">
+                                    <span class="precio">4 alertas</span>
+
+                                    <button class="btn-comprar" type="button">
+                                        <i class="fa-solid fa-eye"></i>
+                                        Ver detalle
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Gestión de correos</h3>
+                                <p class="autor">Duración: 45 minutos</p>
+
+                                <span class="tag">Postura correcta: 88%</span>
+
+                                <div class="precio-btn">
+                                    <span class="precio">1 alerta</span>
+
+                                    <button class="btn-comprar" type="button">
+                                        <i class="fa-solid fa-eye"></i>
+                                        Ver detalle
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Elaboración de informe</h3>
+                                <p class="autor">Duración: 1 hora 30 minutos</p>
+
+                                <span class="tag">Postura correcta: 80%</span>
+
+                                <div class="precio-btn">
+                                    <span class="precio">2 alertas</span>
+
+                                    <button class="btn-comprar" type="button">
+                                        <i class="fa-solid fa-eye"></i>
+                                        Ver detalle
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="Destacados">
+
+                        <div class="container-destacados">
+                            <h2>Consejos para tu jornada</h2>
+                            <p>Acciones rápidas para trabajar con mayor comodidad</p>
+                        </div>
+
+                        <div class="divisor">
+
+                            <div class="box">
+
+                                <div class="user">
+
+                                    <div class="imagen consejo-icono">
+                                        <i class="fa-solid fa-display"></i>
+                                    </div>
+
+                                    <div class="descrip">
+                                        <h4>Ajusta la pantalla</h4>
+                                        <p>Colócala a la altura de tus ojos</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="content">
+                                    <p>
+                                        Mantén una distancia aproximada de un brazo
+                                        entre tus ojos y la pantalla.
+                                    </p>
+                                </div>
+
+                                <div class="boton-Ver-Perfil">
+                                    <button type="button">Ver recomendación</button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="box">
+
+                                <div class="user">
+
+                                    <div class="imagen consejo-icono">
+                                        <i class="fa-solid fa-chair"></i>
+                                    </div>
+
+                                    <div class="descrip">
+                                        <h4>Apoya la espalda</h4>
+                                        <p>Utiliza correctamente el respaldo</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="content">
+                                    <p>
+                                        Mantén la zona lumbar apoyada y los pies
+                                        completamente sobre el suelo.
+                                    </p>
+                                </div>
+
+                                <div class="boton-Ver-Perfil">
+                                    <button type="button">Ver recomendación</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="msgProgreso" class="seccion-panel" style="display: none;">
+
+                    <h2>Progreso semanal</h2>
+
+                    <p class="sub">
+                        Compara tus resultados de los últimos siete días
+                    </p>
+
+                    <div class="cards">
+
+                        <div class="card tarjeta-progreso">
+                            <div class="info">
+                                <h3>Postura correcta</h3>
+                                <p class="autor">Meta semanal: 85%</p>
+
+                                <div class="barra-progreso">
+                                    <div class="barra-completada" style="width: 81%;"></div>
+                                </div>
+
+                                <span class="tag">81% alcanzado</span>
+                            </div>
+                        </div>
+
+                        <div class="card tarjeta-progreso">
+                            <div class="info">
+                                <h3>Pausas activas</h3>
+                                <p class="autor">Meta semanal: 25 pausas</p>
+
+                                <div class="barra-progreso">
+                                    <div class="barra-completada" style="width: 72%;"></div>
+                                </div>
+
+                                <span class="tag">18 pausas completadas</span>
+                            </div>
+                        </div>
+
+                        <div class="card tarjeta-progreso">
+                            <div class="info">
+                                <h3>Tiempo monitoreado</h3>
+                                <p class="autor">Meta semanal: 35 horas</p>
+
+                                <div class="barra-progreso">
+                                    <div class="barra-completada" style="width: 80%;"></div>
+                                </div>
+
+                                <span class="tag">28 horas completadas</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="msgRecomendaciones" class="seccion-panel" style="display: none;">
+
+                    <h2>Recomendaciones personalizadas</h2>
+
+                    <p class="sub">
+                        Sugerencias basadas en tus alertas posturales
+                    </p>
+
+                    <div class="cards">
+
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-person-walking"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Pausa activa de cinco minutos</h3>
+                                <p class="autor">
+                                    Recomendada después de dos horas continuas de trabajo
+                                </p>
+
+                                <span class="tag">Prioridad alta</span>
+
+                                <div class="precio-btn">
+                                    <button
+                                        class="btn-comprar"
+                                        onclick="document.getElementById('msgRecomendaciones').scrollIntoView({ behavior: 'smooth' })"
+                                        type="button">
+                                        Ver ejercicios
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                            </div>
+
+                            <div class="info">
+                                <h3>Ajusta tu distancia</h3>
+                                <p class="autor">
+                                    Te acercaste demasiado a la pantalla en tres sesiones
+                                </p>
+
+                                <span class="tag">Prioridad media</span>
+
+                                <div class="precio-btn">
+                                    <button
+                                        class="btn-comprar"
+                                        onclick="document.getElementById('msgRecomendaciones').scrollIntoView({ behavior: 'smooth' })"
+                                        type="button">
+                                        Ver consejo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3 class="logo">Posture-Check</h3>
+
+                        <p class="slogan">
+                            Mejorando tu postura, mejorando tu bienestar
+                        </p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Una solución inteligente que ayuda a estudiantes,
+                    trabajadores remotos y jugadores a mejorar sus hábitos posturales.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Trabajadores remotos</h4>
+
+                <ul>
+                    <li><a href="../../trabajadores/dashboard/dashboard.html">Panel</a></li>
+                    <li><a href="../../trabajadores/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="../../trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="../../landing/index.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="../../landing/index.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="../../landing/index.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Soporte</h4>
+
+                <ul>
+                    <li><a href="../../landing/index.html#contacto">Contacto</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="../../landing/index.html">Cerrar sesión</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+<script src="../../common/app-shell.js"></script>
+    <script src="../../common/app-features.js"></script>
+</body>
+</html>
