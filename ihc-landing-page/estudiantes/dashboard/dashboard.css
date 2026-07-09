@@ -1,17 +1,8 @@
-:root {
-    --azul-principal: #3B7DC9;
-    --azul-hover: #2F68AA;
-    --azul-claro: #E7F0FA;
-    --verde: #64C7B8;
+  --verde-principal: #64C7B8;
     --verde-oscuro: #3E8F83;
-    --morado: #7A66CC;
-    --fondo: #F7FBFF;
-    --blanco: #FFFFFF;
-    --texto: #27364A;
-    --texto-secundario: #64748B;
-    --borde: #D6E0EA;
-    --sombra: 0 4px 14px rgba(39, 54, 74, 0.07);
-}
+    --verde-hover: #32766D;
+    --verde-claro: #E8F8F5;
+    --verde-muy-claro: #F4FCFA;
 
 * {
     box-sizing: border-box;
