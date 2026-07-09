@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoreo del trabajador | Posture-Check</title>
+
+    <link rel="stylesheet" href="monitoreo.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <img src="/trabajadores/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+            <div class="texto-logo">
+                <h1>Posture-Check</h1>
+                <p>Mejorando tu postura, mejorando tu bienestar</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="/trabajadores/dashboard/dashboard.html">Dashboard</a>
+            <a href="/trabajadores/monitoreo/monitoreo.html">Monitoreo</a>
+            <a href="/trabajadores/perfil/perfil.html">Mi perfil</a>
+        </nav>
+
+        <div class="usuario">
+
+            <div class="usuario-info">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Trabajador remoto</span>
+            </div>
+
+            <div class="dropdown">
+                <ul>
+                    <li><a href="/trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="/landing/landing.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero-monitoreo">
+
+            <div>
+                <span class="etiqueta">Jornada laboral saludable</span>
+
+                <h1>Monitorea tu postura mientras trabajas</h1>
+
+                <p>
+                    Activa la cámara, configura tus alertas y recibe avisos durante tu jornada
+                    para mantener una postura adecuada mientras trabajas.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="contenedor-principal">
+
+            <div class="panel-camara">
+
+                <div class="vista-camara" id="vistaCamara">
+
+                    <div class="camara-placeholder" id="camaraPlaceholder">
+                        <i class="fa-solid fa-video"></i>
+                        <h2>Cámara desactivada</h2>
+                        <p>Activa la cámara para comenzar el monitoreo postural.</p>
+                    </div>
+
+                    <video id="videoCamara" autoplay playsinline></video>
+
+                    <div class="estado-postura" id="estadoPostura">
+                        Esperando inicio
+                    </div>
+
+                </div>
+
+
+                <div class="acciones-camara">
+
+                    <button id="btnActivarCamara" class="btn-principal" type="button">
+                        <i class="fa-solid fa-camera"></i>
+                        Activar cámara
+                    </button>
+
+                    <button id="btnDetenerCamara" class="btn-secundario" type="button" disabled>
+                        <i class="fa-solid fa-video-slash"></i>
+                        Detener cámara
+                    </button>
+
+                </div>
+
+
+                <div class="privacidad">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <h3>Privacidad protegida</h3>
+                        <p>
+                            La cámara se utiliza únicamente durante la sesión
+                            y Posture-Check no almacena tus imágenes.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel-configuracion">
+
+                <h2>Configura tu jornada</h2>
+
+                <p class="subtexto">
+                    Personaliza el monitoreo según tu jornada de trabajo remoto.
+                </p>
+
+
+                <div class="campo">
+                    <label for="actividad">Actividad principal</label>
+
+                    <select id="actividad">
+                        <option value="" selected disabled>Selecciona una actividad</option>
+                        <option value="reunion">Reunión virtual</option>
+                        <option value="programacion">Programación</option>
+                        <option value="documentos">Elaboración de documentos</option>
+                        <option value="correos">Gestión de correos</option>
+                        <option value="diseno">Diseño o edición</option>
+                        <option value="otro">Otra actividad</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="duracion">Duración estimada</label>
+
+                    <select id="duracion">
+                        <option value="30">30 minutos</option>
+                        <option value="60">1 hora</option>
+                        <option value="120" selected>2 horas</option>
+                        <option value="240">4 horas</option>
+                        <option value="480">8 horas</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="frecuencia">Frecuencia de alertas</label>
+
+                    <select id="frecuencia">
+                        <option value="5">Cada 5 minutos</option>
+                        <option value="10">Cada 10 minutos</option>
+                        <option value="15" selected>Cada 15 minutos</option>
+                        <option value="30">Cada 30 minutos</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label for="tipoAlerta">Tipo de alerta</label>
+
+                    <select id="tipoAlerta">
+                        <option value="visual" selected>Visual</option>
+                        <option value="sonora">Sonora</option>
+                        <option value="ambas">Visual y sonora</option>
+                    </select>
+                </div>
+
+
+                <div class="campo">
+                    <label>Zonas a supervisar</label>
+
+                    <div class="chips">
+
+                        <button class="chip activo" type="button">Cuello</button>
+                        <button class="chip activo" type="button">Espalda</button>
+                        <button class="chip activo" type="button">Hombros</button>
+                        <button class="chip" type="button">Brazos</button>
+                        <button class="chip" type="button">Muñecas</button>
+                        <button class="chip" type="button">Distancia a la pantalla</button>
+
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <label for="objetivo">Objetivo de la jornada</label>
+
+                    <input
+                        id="objetivo"
+                        type="text"
+                        placeholder="Ejemplo: mantener la espalda apoyada">
+                </div>
+
+
+                <div class="acciones-sesion">
+
+                    <button id="btnIniciarSesion" class="btn-principal" type="button">
+                        <i class="fa-solid fa-play"></i>
+                        Iniciar monitoreo
+                    </button>
+
+                    <button id="btnFinalizarSesion" class="btn-secundario" type="button" disabled>
+                        <i class="fa-solid fa-stop"></i>
+                        Finalizar sesión
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="resumen-sesion">
+
+            <h2>Resumen de la jornada</h2>
+
+            <div class="tarjetas-resumen">
+
+                <div class="tarjeta">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Tiempo transcurrido</span>
+                    <strong id="tiempoSesion">00:00:00</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-solid fa-user-check"></i>
+                    <span>Postura correcta</span>
+                    <strong id="porcentajePostura">0%</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Alertas</span>
+                    <strong id="cantidadAlertas">0</strong>
+                </div>
+
+                <div class="tarjeta">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <span>Pausas activas</span>
+                    <strong id="cantidadPausas">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col marca">
+
+                <div class="footer-logo">
+                    <img src="/trabajadores/dashboard/imagenes/logo.png" alt="Logo de Posture-Check">
+
+                    <div>
+                        <h3 class="logo">Posture-Check</h3>
+                        <p class="slogan">Mejorando tu postura</p>
+                    </div>
+                </div>
+
+                <p class="descripcion">
+                    Monitorea tu postura y crea hábitos más saludables durante
+                    tus jornadas de trabajo remoto.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Trabajadores remotos</h4>
+
+                <ul>
+                    <li><a href="/trabajadores/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="/trabajadores/monitoreo/monitoreo.html">Monitoreo</a></li>
+                    <li><a href="/trabajadores/perfil/perfil.html">Mi perfil</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Posture-Check</h4>
+
+                <ul>
+                    <li><a href="/landing/landing.html#comoFunciona">Cómo funciona</a></li>
+                    <li><a href="/landing/landing.html#NuestrosBeneficios">Beneficios</a></li>
+                    <li><a href="/landing/landing.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-copy">
+            <p>© 2026 Posture-Check. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="monitoreo.js"></script>
+
+
+
+
+<script>
+    function aplicarTemaGuardado() {
+        const temaNuevo = localStorage.getItem("tema");
+        const temaAnterior = localStorage.getItem("modoOscuro");
+
+        const usarOscuro =
+            temaNuevo === "oscuro" ||
+            (temaNuevo === null && temaAnterior === "activado");
+
+        document.body.classList.toggle("modo-oscuro", usarOscuro);
+    }
+
+    aplicarTemaGuardado();
+
+    window.addEventListener("storage", aplicarTemaGuardado);
+</script>
+
+</body>
+</html>
